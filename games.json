@@ -63,6 +63,125 @@
         "If you see text in curly brackets like <code>{Amount}</code>, please report it with the card or screen name.",
         "The translation may need an update after big game updates."
       ]
+    },
+    {
+      "slug": "silent-hill-townfall",
+      "name_ar": "سايلنت هيل: تاونفول",
+      "name_en": "SILENT HILL: Townfall",
+      "cover": "images/silent-hill-townfall/cover.jpg",
+      "screenshots": [],
+      "screenshots_pending": 4,
+      "description": "تعريب كامل لنصوص اللعبة: الحوارات والترجمة النصية، والمستندات والرسائل، والأغراض، والقوائم، والأهداف، واللافتات. الأصوات تبقى بالإنجليزية.",
+      "description_en": "A full Arabic translation of the game's text: dialogue and subtitles, documents and notes, items, menus, objectives and signs. Voices stay in English.",
+      "important": "اختر لغة النصوص <b>Italiano</b> (الإيطالية) داخل اللعبة. التعريب العربي يُحمَّل عبر خانة اللغة الإيطالية، فاختيار <b>Italiano</b> يُظهر النصوص بالعربية. الإيطالية ليست لغة الترجمة، بل هي الخانة التي يستخدمها التعريب فقط.",
+      "important_en": "Set the game's Text Language to <b>Italiano</b> (Italian). The Arabic translation is loaded through the Italian language slot, so choosing <b>Italiano</b> shows the game in Arabic. Italian is not the translation language, it's only the slot the mod uses.",
+      "status": "complete",
+      "percent": 100,
+      "popularity": 2,
+      "platform": "PC (Steam)",
+      "language": "العربية",
+      "language_en": "Arabic",
+      "mod_version": "1.0.0",
+      "game_version": "1.4.153829",
+      "file_size": "10.4 MB",
+      "release_date": "2026-10-04",
+      "download": "https://github.com/{repo}/releases/download/silent-hill-townfall-v1.0.0/TownfallArabic-v1.0.0.zip",
+      "about": [
+        "تعريب شامل لكل نصوص <b>SILENT HILL: Townfall</b> تقريبًا: أكثر من 3,900 سطر بين حوارات وترجمة نصية، ووصف للأصوات، ومستندات ورسائل وأشرطة، وأسماء الأغراض ووصفها، والقوائم والإعدادات، والأهداف، ولافتات الشوارع والمباني، والدروس التعليمية، والشارة.",
+        "كُتبت الترجمة بالعربية الفصحى المعاصرة، مع الحفاظ على أجواء الرعب النفسي للقصة: لكل شخصية صوتها، والمستندات بأسلوب أدبي، والقوائم قصيرة وواضحة. أسماء الأشخاص والأماكن ثابتة في كل اللعبة.",
+        "أُضيفت الحروف العربية إلى خطوط اللعبة نفسها، فتبقى الحروف الإنجليزية كما هي، وتتصل الحروف العربية وتُعرض من اليمين إلى اليسار بشكل صحيح.",
+        "الأصوات تبقى بالإنجليزية، والترجمة النصية تظهر بالعربية. الإنجليزية وبقية لغات اللعبة لا تتغير، وفقط خانة الإيطالية تصبح عربية."
+      ],
+      "about_en": [
+        "A full translation of almost all text in <b>SILENT HILL: Townfall</b>: more than 3,900 lines of dialogue and subtitles, sound captions, documents, letters and tapes, item names and descriptions, menus and settings, objectives, street and building signs, tutorials and credits.",
+        "Written in Modern Standard Arabic while keeping the story's psychological-horror tone: each character keeps their own voice, documents read like real letters, and menus stay short and clear. Names of people and places are consistent across the whole game.",
+        "Arabic letters were added to the game's own fonts, so English letters look exactly the same and Arabic text joins and runs right-to-left correctly.",
+        "Voices stay in English with Arabic subtitles. English and the game's other languages are untouched: only the Italian slot becomes Arabic."
+      ],
+      "requirements": [
+        "<b>SILENT HILL: Townfall</b> على Steam (الحاسوب).",
+        "برنامج لفك الضغط (Windows يفتح ملفات <code>.zip</code> مباشرة).",
+        "لا تحتاج أي برنامج مودات آخر."
+      ],
+      "requirements_en": [
+        "<b>SILENT HILL: Townfall</b> on Steam (PC).",
+        "A way to unzip files (Windows opens <code>.zip</code> files on its own).",
+        "No other mod tools needed."
+      ],
+      "compatibility": [
+        "مختبَر على إصدار اللعبة <b>1.4.153829</b>.",
+        "لا يعدّل ملفات اللعبة الأصلية، ولا الحفظ، ولا الإنجازات.",
+        "قد يحتاج إلى تحديث بعد تحديثات اللعبة الكبيرة."
+      ],
+      "compatibility_en": [
+        "Tested on game version <b>1.4.153829</b>.",
+        "Does not change the game's own files, your saves or achievements.",
+        "May need an update after big game updates."
+      ],
+      "credits": [
+        "الترجمة والتعريب: سوهاتشي، بمساعدة Claude.",
+        "الخطوط العربية: Markazi Text و Noto Kufi Arabic و Aref Ruqaa، بترخيص SIL Open Font License 1.1 (التفاصيل داخل الملف المضغوط).",
+        "اللعبة © Konami Digital Entertainment. من تطوير Screen Burn ونشر Annapurna Interactive. تعريب معجبين غير رسمي."
+      ],
+      "credits_en": [
+        "Translation and localisation: Sohatshy, with help from Claude.",
+        "Arabic fonts: Markazi Text, Noto Kufi Arabic and Aref Ruqaa, under the SIL Open Font License 1.1 (details inside the zip).",
+        "Game © Konami Digital Entertainment. Developed by Screen Burn, published with Annapurna Interactive. Unofficial fan translation."
+      ],
+      "install_steps": [
+        "حمّل الملف <code>TownfallArabic-v1.0.0.zip</code> من زر التحميل في الأعلى، وأغلق اللعبة.",
+        "فك ضغط الملف (زر الفأرة الأيمن ← <b>Extract All</b>). ستجد بداخله ثلاثة ملفات للتعريب: <code>TownfallArabic_P.pak</code> و <code>TownfallArabic_P.utoc</code> و <code>TownfallArabic_P.ucas</code>. الثلاثة مطلوبة معًا.",
+        "افتح مجلد اللعبة: في Steam اضغط بزر الفأرة الأيمن على اللعبة ← <b>Manage</b> ← <b>Browse local files</b>.",
+        "ادخل إلى المجلد <code>Townfall\\Content\\Paks</code>.",
+        "إن لم يكن فيه مجلد اسمه <code>~mods</code> فأنشئه: زر الفأرة الأيمن ← <b>New</b> ← <b>Folder</b>، واكتب الاسم <code>~mods</code> (بعلامة <code>~</code> في أوله).",
+        "انسخ الملفات الثلاثة إلى داخل <code>~mods</code>. المسار النهائي: <code>Townfall\\Content\\Paks\\~mods\\TownfallArabic_P.pak</code> (وبجانبه ملفا <code>.utoc</code> و <code>.ucas</code>). لا تحذف ولا تستبدل أي ملف من ملفات اللعبة.",
+        "شغّل اللعبة.",
+        "من القائمة الرئيسية: <b>Options</b> ← <b>Game Options</b> ← <b>Text Language</b>.",
+        "اختر <b>Italiano</b>. هذه هي الخانة التي يُحمَّل منها التعريب: ستتحول النصوص إلى العربية فورًا، وسيظهر اسم اللغة «العربية». اترك <b>Audio Language</b> على English.",
+        "إن لم تتغير بعض النصوص، أغلق اللعبة وشغّلها مرة أخرى.",
+        "لإلغاء التثبيت: احذف الملفات الثلاثة من مجلد <code>~mods</code>، ثم اختر English من <b>Text Language</b>."
+      ],
+      "install_steps_en": [
+        "Download <code>TownfallArabic-v1.0.0.zip</code> with the download button above, and close the game.",
+        "Unzip it (right-click → <b>Extract All</b>). Inside are the three mod files: <code>TownfallArabic_P.pak</code>, <code>TownfallArabic_P.utoc</code> and <code>TownfallArabic_P.ucas</code>. All three are needed together.",
+        "Open the game folder: in Steam, right-click the game → <b>Manage</b> → <b>Browse local files</b>.",
+        "Go into <code>Townfall\\Content\\Paks</code>.",
+        "If there is no folder called <code>~mods</code>, create it: right-click → <b>New</b> → <b>Folder</b>, and name it <code>~mods</code> (with the <code>~</code> at the start).",
+        "Copy the three files into <code>~mods</code>. Final path: <code>Townfall\\Content\\Paks\\~mods\\TownfallArabic_P.pak</code> (with the <code>.utoc</code> and <code>.ucas</code> next to it). Don't delete or replace any of the game's own files.",
+        "Start the game.",
+        "Main menu → <b>Options</b> → <b>Game Options</b> → <b>Text Language</b>.",
+        "Pick <b>Italiano</b>. That's the slot the translation loads from: the text switches to Arabic right away and the language name shows as «العربية». Leave <b>Audio Language</b> on English.",
+        "If some text doesn't change, close the game and start it again.",
+        "To uninstall: delete the three files from <code>~mods</code>, then set <b>Text Language</b> back to English."
+      ],
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-10-04",
+          "changes": [
+            "أول إصدار: تعريب كامل للحوارات والمستندات والأغراض والقوائم والأهداف واللافتات والشارة.",
+            "إضافة الحروف العربية إلى خطوط اللعبة مع دعم الكتابة من اليمين لليسار.",
+            "التعريب يحل محل خانة اللغة الإيطالية، ويبقي الإنجليزية وبقية اللغات كما هي."
+          ],
+          "changes_en": [
+            "First release: full translation of dialogue, documents, items, menus, objectives, signs and credits.",
+            "Arabic letters added to the game's fonts, with right-to-left text support.",
+            "The translation uses the Italian language slot; English and the other languages are unchanged."
+          ]
+        }
+      ],
+      "known_issues": [
+        "يجب اختيار <b>Italiano</b> لتظهر العربية، وتظهر اللغة باسم «العربية» داخل اللعبة. لا تظهر الإيطالية الأصلية ما دام التعريب مثبتًا.",
+        "بعض الشاشات ذات الخط البكسلي (مثل جهاز النداء وشاشات الحاسوب) تستخدم خطًا تجاريًا لا يمكن تعديله، وقد تظهر فيها مربعات بدل الحروف العربية.",
+        "بعض الأسماء والرموز والعلامات التجارية تبقى بالإنجليزية عمدًا (مثل CEG و CRTV وأسماء الملفات).",
+        "قد يحتاج التعريب إلى تحديث بعد تحديثات اللعبة الكبيرة."
+      ],
+      "known_issues_en": [
+        "You must pick <b>Italiano</b> to see Arabic; inside the game the language is named «العربية». The original Italian text is not shown while the mod is installed.",
+        "A few screens with a pixel font (such as the pager and computer screens) use a commercial font that can't be modified, so Arabic may show as boxes there.",
+        "Some names, codes and brand names stay in English on purpose (for example CEG, CRTV and file names).",
+        "The translation may need an update after big game updates."
+      ]
     }
   ]
 }

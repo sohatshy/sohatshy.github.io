@@ -537,6 +537,21 @@ body.menu-open .drawer > a { opacity: 1; transform: none; }
 .callout p { margin: 0; }
 .callout.info { background: rgba(135, 150, 255, .08); box-shadow: inset 0 0 0 1px rgba(135, 150, 255, .3); }
 .callout.info svg { color: var(--soon); }
+/* Prominent warning (e.g. a required in-game setting) */
+.callout.warn { background: rgba(242, 165, 70, .12); box-shadow: inset 0 0 0 2px rgba(242, 165, 70, .7); font-size: 1.05rem; line-height: 1.7; }
+.callout.warn svg { color: var(--warn); width: 28px; height: 28px; }
+.callout.warn strong { color: var(--warn); }
+.game-title .callout.warn { margin: 6px 0 18px; }
+
+/* Game page: info cards (requirements, compatibility, credits, notes) */
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 28px; }
+.info-card { --cut: 14px; padding: 18px 20px; background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); }
+.info-card h3 { margin: 0 0 10px; font-size: 1.05rem; color: var(--gold-2); }
+.info-card ul { margin: 0; padding-inline-start: 18px; color: #cfd6ea; display: grid; gap: 6px; }
+
+/* Screenshot placeholder tiles (until real screenshots are added) */
+.shot-placeholder { cursor: default; display: grid; place-items: center; background: repeating-linear-gradient(135deg, var(--surface) 0 14px, var(--surface-2) 14px 28px); }
+.shot-placeholder span { color: var(--faint); font-weight: 700; font-size: .9rem; padding: 6px 12px; background: rgba(3, 6, 15, .55); border-radius: 6px; }
 
 /* Install guide: big step blocks with mock UI */
 .guide-step { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding-block: 44px; border-bottom: 1px solid var(--line); }

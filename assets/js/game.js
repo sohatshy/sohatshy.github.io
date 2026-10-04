@@ -32,6 +32,12 @@
     const steps = asList(S.f(g, "install_steps"));
     const issues = asList(S.f(g, "known_issues"));
     const changelog = asList(g.changelog);
+    // Optional extras (only shown when the games.json entry has them)
+    const important = S.f(g, "important");
+    const about = asList(S.f(g, "about"));
+    const info = [["game.requirements", asList(S.f(g, "requirements"))], ["game.compat", asList(S.f(g, "compatibility"))],
+      ["game.credits", asList(S.f(g, "credits"))], ["game.notes", asList(S.f(g, "notes"))]].filter(([, list]) => list.length);
+    const pending = Math.max(0, Number(g.screenshots_pending) || 0);
     const others = games.filter((x) => x.slug !== g.slug)
       .sort((a, b) => (a.popularity ?? 999) - (b.popularity ?? 999));
 
@@ -53,6 +59,7 @@
               <h1 class="rise">${S.esc(S.mainName(g))}</h1>
               <div class="game-badges rise">${S.badge(g.status)}${S.isNew(g) ? `<span class="badge new">${S.t("badge.new")}</span>` : ""}</div>
               <p class="game-desc rise">${S.esc(S.f(g, "description"))}</p>
+              ${important ? `<div class="callout warn cut rise" role="note">${S.icons.alert}<p><strong>${S.t("game.important")}</strong> ${important}</p></div>` : ""}
               <div class="game-progress reveal">${S.progress(g.percent, true)}</div>
               <div class="stats reveal">
                 ${stat("game.modVersion", g.mod_version && "v" + String(g.mod_version).replace(/^v/i, ""))}
@@ -60,6 +67,7 @@
                 ${stat("game.size", g.file_size)}
                 ${stat("game.released", S.formatDate(g.release_date))}
                 ${stat("game.platform", S.f(g, "platform"))}
+                ${stat("game.language", S.f(g, "language"))}
               </div>
               <div class="download-row reveal">
                 ${soon || !dl
@@ -73,13 +81,25 @@
         </div>
       </section>
 
-      ${shots.length ? `
+      ${shots.length || pending ? `
       <section class="section" style="padding-top:24px">
         <div class="container">
           <div class="section-head reveal"><div><span class="eyebrow">Gallery</span><h2 class="section-title">${S.t("game.shots")}</h2></div></div>
           <div class="gallery reveal">
             ${shots.map((p, i) => `<button type="button" class="shot cut" data-i="${i}" aria-label="${S.t("game.shots")} ${i + 1}">${S.img(p, "", { thumb: true, w: 640, h: 360 })}</button>`).join("")}
+            ${Array.from({ length: pending }, () => `<div class="shot shot-placeholder cut" aria-hidden="true"><span>${S.t("game.shotSoon")}</span></div>`).join("")}
           </div>
+        </div>
+      </section>` : ""}
+
+      ${about.length || info.length ? `
+      <section class="section" style="padding-top:24px">
+        <div class="container">
+          ${about.length ? `<div class="section-head reveal"><div><span class="eyebrow">About</span><h2 class="section-title">${S.t("game.about")}</h2></div></div>
+          <div class="prose reveal" style="max-width:900px">${about.map((p) => `<p>${p}</p>`).join("")}</div>` : ""}
+          ${info.length ? `<div class="info-grid reveal">${info.map(([key, list]) => `
+            <div class="info-card cut"><h3>${S.t(key)}</h3><ul>${list.map((x) => `<li>${x}</li>`).join("")}</ul></div>`).join("")}
+          </div>` : ""}
         </div>
       </section>` : ""}
 
@@ -141,7 +161,7 @@
     };
 
     // Gallery
-    S.$$(".shot").forEach((b) => (b.onclick = () => openLightbox(shots, Number(b.dataset.i))));
+    S.$$(".shot[data-i]").forEach((b) => (b.onclick = () => openLightbox(shots, Number(b.dataset.i))));
     S.observe();
   }
 
