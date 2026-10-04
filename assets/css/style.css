@@ -90,6 +90,11 @@ code, kbd {
 html[lang="ar"] [data-lang="en"],
 html[lang="en"] [data-lang="ar"] { display: none !important; }
 
+/* Small "other-language name" labels: let the text pick its own direction.
+   In English mode they hold Arabic, which must not be letter-spaced (it breaks the joined letters). */
+.poster-info .en, .card-body .en, .game-title .en { unicode-bidi: plaintext; }
+html[lang="en"] .poster-info .en, html[lang="en"] .card-body .en, html[lang="en"] .game-title .en, html[lang="en"] .hero h1 .latin { letter-spacing: 0; font-size: .95rem; text-transform: none; }
+
 /* Latin text inside Arabic layout (game names, versions) */
 .ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; }
 
@@ -115,6 +120,8 @@ html[lang="en"] [data-lang="ar"] { display: none !important; }
   background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .section-sub { color: var(--muted); margin: 6px 0 0; }
+/* Gradient text is clipped to its box; extra bottom room keeps Arabic dots (like the ones under ي) visible */
+.section-title, .hero h1, .page-hero h1 { padding-bottom: .18em; margin-bottom: -.18em; }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -155,8 +162,8 @@ html[lang="en"] [data-lang="ar"] { display: none !important; }
 .brand img { width: 40px; height: 40px; transition: transform .5s var(--ease); }
 .brand:hover img { transform: rotate(-8deg) scale(1.06); }
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
-.brand-name { font-size: 1.35rem; font-weight: 900; }
-.brand-sub { font-size: .62rem; letter-spacing: .3em; color: var(--gold); text-transform: uppercase; direction: ltr; text-align: start; }
+.brand-name { font-size: 1.35rem; font-weight: 900; line-height: 1.45; }
+.brand-sub { font-size: .62rem; letter-spacing: .3em; color: var(--gold); text-transform: uppercase; unicode-bidi: plaintext; }
 
 .nav { display: flex; align-items: center; gap: 4px; margin-inline-start: auto; }
 .nav a {
@@ -197,14 +204,14 @@ body.menu-open .drawer { transform: none; visibility: visible; }
 body.menu-open .drawer-backdrop { opacity: 1; pointer-events: auto; }
 body.menu-open { overflow: hidden; }
 .drawer-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
-.drawer a {
+.drawer > a {
   display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; border-radius: 12px;
   color: var(--text); font-weight: 700; font-size: 1.1rem; background: rgba(255, 255, 255, .03);
   opacity: 0; transform: translateY(8px); transition: opacity .35s, transform .35s var(--ease), background .2s;
 }
-body.menu-open .drawer a { opacity: 1; transform: none; }
-.drawer a:hover, .drawer a[aria-current="page"] { background: rgba(232, 184, 74, .12); color: var(--gold-2); }
-.drawer a small { color: var(--faint); font-size: .7rem; letter-spacing: .15em; direction: ltr; }
+body.menu-open .drawer > a { opacity: 1; transform: none; }
+.drawer > a:hover, .drawer > a[aria-current="page"] { background: rgba(232, 184, 74, .12); color: var(--gold-2); }
+.drawer > a small { color: var(--faint); font-size: .7rem; letter-spacing: .15em; direction: ltr; }
 
 /* ==========================================================================
    Hero (home)
@@ -233,6 +240,11 @@ body.menu-open .drawer a { opacity: 1; transform: none; }
     linear-gradient(var(--hero-side, 270deg), rgba(8, 13, 28, .95) 0%, rgba(8, 13, 28, .6) 45%, rgba(8, 13, 28, .2) 100%);
 }
 [dir="ltr"] .hero { --hero-side: 90deg; }
+/* Fade the hero layers out at the bottom so they blend into the page glow (no hard edge) */
+.hero-bg, .hero::before, .game-hero-bg, .game-hero::before {
+  -webkit-mask-image: linear-gradient(180deg, #000 65%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 65%, transparent 100%);
+}
 .hero::after {                /* fine diagonal pattern */
   content: ""; position: absolute; inset: 0; z-index: -1; opacity: .35; pointer-events: none;
   background-image: repeating-linear-gradient(135deg, rgba(255, 255, 255, .025) 0 1px, transparent 1px 14px);
@@ -244,7 +256,7 @@ body.menu-open .drawer a { opacity: 1; transform: none; }
   background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent;
   filter: drop-shadow(0 6px 30px rgba(232, 184, 74, .25));
 }
-.hero h1 .latin { display: block; font-size: .28em; letter-spacing: .5em; font-weight: 700; color: var(--muted); -webkit-text-fill-color: var(--muted); direction: ltr; text-align: start; margin-top: 10px; }
+.hero h1 .latin { display: block; font-size: .28em; letter-spacing: .5em; font-weight: 700; color: var(--muted); -webkit-text-fill-color: var(--muted); unicode-bidi: plaintext; margin-top: 1.3em; }
 .hero-lead { font-size: clamp(1.1rem, 2vw, 1.35rem); color: #d5dbec; max-width: 560px; margin-bottom: 30px; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 .hero-stats { display: flex; gap: 28px; margin-top: 44px; flex-wrap: wrap; }
@@ -305,7 +317,7 @@ body.menu-open .drawer a { opacity: 1; transform: none; }
 }
 .poster:hover .poster-inner::after { transform: translateX(130%); }
 .poster-info { position: absolute; inset-inline: 0; bottom: 0; z-index: 3; padding: 16px; }
-.poster-info .en { display: block; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); font-weight: 700; direction: ltr; text-align: start; }
+.poster-info .en { display: block; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
 .poster-info .ar { display: block; font-size: 1.15rem; font-weight: 800; line-height: 1.35; }
 .poster .badge { position: absolute; top: 12px; inset-inline-start: 12px; z-index: 3; }
 .rank-tag {
@@ -365,7 +377,7 @@ body.menu-open .drawer a { opacity: 1; transform: none; }
 .card-media .badge { position: absolute; top: 12px; inset-inline-start: 12px; }
 .card-media .badge.new { inset-inline-start: auto; inset-inline-end: 12px; }
 .card-body { padding: 18px 20px 6px; flex: 1; }
-.card-body .en { display: block; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); font-weight: 700; direction: ltr; text-align: start; }
+.card-body .en { display: block; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
 .card-body h3 { font-size: 1.25rem; margin: 2px 0 6px; }
 .card-body p { color: var(--muted); font-size: .92rem; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .card-progress { padding: 14px 20px 0; }
@@ -410,7 +422,7 @@ body.menu-open .drawer a { opacity: 1; transform: none; }
 .game-cover .inner { aspect-ratio: 2 / 3; overflow: hidden; background: var(--surface); }
 .game-cover img { width: 100%; height: 100%; object-fit: cover; }
 @keyframes float-in { from { opacity: 0; transform: translateY(24px) scale(.97); } to { opacity: 1; transform: none; } }
-.game-title .en { font-size: .85rem; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); font-weight: 700; direction: ltr; display: block; text-align: start; }
+.game-title .en { font-size: .85rem; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); font-weight: 700; display: block; }
 .game-title h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 900; margin: 4px 0 10px; }
 .game-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
 .game-desc { color: #cfd6ea; font-size: 1.08rem; max-width: 720px; }
@@ -487,6 +499,7 @@ body.menu-open .drawer a { opacity: 1; transform: none; }
 .lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 8px; box-shadow: 0 30px 80px rgba(0, 0, 0, .7); transform: scale(.96); transition: transform .4s var(--ease); }
 .lightbox.open img { transform: none; }
 .lightbox .icon-btn { position: absolute; background: rgba(255, 255, 255, .08); }
+.lightbox .icon-btn[hidden] { display: none; }
 .lb-close { top: 16px; inset-inline-end: 16px; }
 .lb-prev { inset-inline-start: 16px; top: 50%; translate: 0 -50%; }
 .lb-next { inset-inline-end: 16px; top: 50%; translate: 0 -50%; }
@@ -577,7 +590,7 @@ body.menu-open .drawer a { opacity: 1; transform: none; }
    ========================================================================== */
 .site-footer { margin-top: 80px; border-top: 1px solid var(--line); background: linear-gradient(180deg, rgba(12, 19, 38, .6), var(--bg)); }
 .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; padding-block: 48px 32px; }
-.footer-top h4 { font-size: .75rem; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; direction: ltr; text-align: start; }
+.footer-top h4 { font-size: .75rem; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; unicode-bidi: plaintext; }
 .footer-top ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
 .footer-top a { color: var(--muted); }
 .footer-top a:hover { color: var(--gold-2); }
@@ -633,3 +646,6 @@ body.menu-open .drawer a { opacity: 1; transform: none; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
   .reveal, .rise { opacity: 1; transform: none; }
 }
+
+/* English mode: the Arabic name under the big hero title keeps a readable size */
+html[lang="en"] .hero h1 .latin { font-size: .3em; }
