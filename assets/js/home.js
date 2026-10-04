@@ -2,38 +2,12 @@
 (function () {
   "use strict";
   const state = { filter: "all", query: "" };
-  let heroStarted = false;
 
   // Make Arabic search forgiving: ignore diacritics and different forms of alef/ya/ta marbuta.
   const norm = (s) => String(s || "").toLowerCase()
     .replace(/[ً-ٰٟـ]/g, "")
     .replace(/[أإآٱ]/g, "ا").replace(/ى/g, "ي").replace(/ة/g, "ه").replace(/ؤ/g, "و").replace(/ئ/g, "ي")
     .replace(/[^\p{L}\p{N}]+/gu, " ").trim();
-
-  function heroBackground(games) {
-    if (heroStarted) return;
-    heroStarted = true;
-    const shots = games.flatMap((g) => S.shotsOf(g)).slice(0, 8);
-    if (!shots.length) return;
-    const bg = S.$("#hero-bg");
-    bg.innerHTML = shots.map((p) => `<div class="slide" data-src="${S.esc(p)}"></div>`).join("");
-    const slides = S.$$(".slide", bg);
-    // Load WebP, fall back to the original if needed
-    slides.forEach((el) => {
-      const src = el.dataset.src, webp = S.webp(src);
-      const probe = new Image();
-      probe.onload = () => (el.style.backgroundImage = `url("${webp}")`);
-      probe.onerror = () => (el.style.backgroundImage = `url("${src}")`);
-      probe.src = webp;
-    });
-    let i = 0;
-    slides[0].classList.add("on");
-    if (slides.length > 1) setInterval(() => {
-      slides[i].classList.remove("on");
-      i = (i + 1) % slides.length;
-      slides[i].classList.add("on");
-    }, 7000);
-  }
 
   function renderHero(games) {
     const h1 = S.$(".hero h1");
@@ -116,7 +90,6 @@
 
   S.boot((data) => {
     const games = data.games;
-    heroBackground(games);
     renderHero(games);
     renderPopular(games);
     renderFilters(games);
