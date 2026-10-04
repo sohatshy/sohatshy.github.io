@@ -35,7 +35,7 @@ Then open <http://localhost:8000>.
 | `index.html`, `game.html`, `install.html`, `faq.html`, `request.html`, `about.html`, `404.html` | Pages |
 | `assets/css/style.css` | Design: colors, fonts, animations |
 | `assets/js/i18n.js` | Interface text in Arabic and English |
-| `assets/js/core.js`, `home.js`, `game.js` | Page logic |
+| `assets/js/core.js`, `home.js`, `game.js`, `install.js` | Page logic |
 | `assets/img/` | Logo, favicons, default link preview |
 | `tools/build.py` | Build and preview script |
 

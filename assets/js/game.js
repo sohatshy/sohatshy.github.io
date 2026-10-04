@@ -73,7 +73,7 @@
                 ${soon || !dl
                   ? `<span class="btn btn-gold btn-lg cut" aria-disabled="true">${S.icons.download}${soon ? S.t("game.soon") : S.t("game.download")}</span>`
                   : `<a class="btn btn-gold btn-lg cut" href="${S.esc(dl)}" rel="noopener">${S.icons.download}${S.t("game.download")}${g.file_size ? ` <small class="ltr" style="opacity:.7;font-weight:700">(${S.esc(g.file_size)})</small>` : ""}</a>`}
-                <a class="btn btn-ghost cut" href="install.html">${S.icons.book}${S.t("game.guide")}</a>
+                <a class="btn btn-ghost cut" href="${S.esc(location.pathname + location.search)}#install" data-jump-install>${S.icons.book}${S.t("game.guide")}</a>
               </div>
               <p class="download-note">${S.t("game.dlNote")}</p>
             </div>
@@ -103,7 +103,7 @@
         </div>
       </section>` : ""}
 
-      <section class="section" style="padding-top:24px">
+      <section class="section" id="install" style="padding-top:24px">
         <div class="container">
           <div class="section-head reveal"><div><span class="eyebrow">Details</span><h2 class="section-title">${S.t("game.details")}</h2></div></div>
           <div class="tabs reveal" role="tablist">
@@ -113,7 +113,6 @@
           <div class="prose" style="max-width:900px">
             <div class="tab-panel" role="tabpanel" id="panel-install" aria-labelledby="tab-install" ${state.tab === "install" ? "" : "hidden"}>
               <ol class="steps">${steps.map((s) => `<li class="cut">${s}</li>`).join("")}</ol>
-              <div class="callout info cut">${S.icons.info}<p><a href="install.html">${S.t("game.guide")}</a></p></div>
             </div>
             <div class="tab-panel" role="tabpanel" id="panel-changes" aria-labelledby="tab-changes" ${state.tab === "changes" ? "" : "hidden"}>
               <div class="timeline">
@@ -126,7 +125,7 @@
             </div>
             <div class="tab-panel" role="tabpanel" id="panel-issues" aria-labelledby="tab-issues" ${state.tab === "issues" ? "" : "hidden"}>
               ${issues.length ? `<ul class="issues">${issues.map((s) => `<li class="cut">${s}</li>`).join("")}</ul>` : `<p>${S.t("game.noIssues")}</p>`}
-              <p style="margin-top:18px"><a class="gh-link" href="${S.esc(S.issuesUrl({ title: "[" + g.name_en + "] " }))}" target="_blank" rel="noopener">${S.icons.github}${S.t("game.reportIssue")}</a></p>
+              ${S.site.discord ? `<p style="margin-top:18px"><a class="gh-link" href="${S.esc(S.site.discord)}" target="_blank" rel="noopener">${S.icons.discord}${S.t("game.reportIssue")}</a></p>` : ""}
             </div>
           </div>
         </div>
@@ -162,7 +161,22 @@
 
     // Gallery
     S.$$(".shot[data-i]").forEach((b) => (b.onclick = () => openLightbox(shots, Number(b.dataset.i))));
+
+    // "How to install" button, and links from the install guide (game/<slug>/#install): open this game's steps
+    S.$("[data-jump-install]").onclick = (e) => { e.preventDefault(); history.replaceState(null, "", e.currentTarget.href); showInstall(true); };
+    if (location.hash === "#install" && !state.jumped) { state.jumped = true; showInstall(false); }
     S.observe();
+  }
+
+  function showInstall(smooth) {
+    selectTab("install");
+    const sec = S.$("#install");
+    S.$$(".reveal", sec).forEach((el) => el.classList.add("in"));
+    const go = () => sec.scrollIntoView({ behavior: smooth ? "smooth" : "instant", block: "start" });
+    // Arriving from another page: wait until images and fonts have settled the layout
+    if (smooth || document.readyState === "complete") return go();
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    window.addEventListener("load", go, { once: true });
   }
 
   function selectTab(id) {

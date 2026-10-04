@@ -19,13 +19,16 @@
       "file_size": "453 KB",
       "release_date": "2026-10-02",
       "download": "https://github.com/{repo}/releases/download/slay-the-spire-2-v0.1.0/ArabicTranslation-v0.1.0.zip",
+      "install_summary": "ضع مجلد <code>ArabicTranslation</code> داخل مجلد <code>mods</code> في مجلد اللعبة، ثم اختر <b>العربية</b> من <b>الإعدادات ← اللغة</b>.",
+      "install_summary_en": "Put the <code>ArabicTranslation</code> folder in the game's <code>mods</code> folder, then pick <b>العربية</b> in <b>Settings → Language</b>.",
       "install_steps": [
         "أغلق اللعبة.",
         "فك ضغط الملف. سترى مجلدًا اسمه <code>ArabicTranslation</code>.",
         "افتح مجلد اللعبة: في Steam اضغط كليك يمين على اللعبة ← <b>Manage</b> ← <b>Browse local files</b>.",
         "انسخ مجلد <code>ArabicTranslation</code> كاملًا إلى مجلد <code>mods</code> داخل مجلد اللعبة (إن لم يوجد مجلد <code>mods</code> فأنشئه). المسار النهائي: <code>Slay the Spire 2\\mods\\ArabicTranslation\\ArabicTranslation.json</code>",
         "شغّل اللعبة. عند أول مرة ستسألك اللعبة عن قبول المودات، فاقبل.",
-        "من <b>الإعدادات ← اللغة</b> اختر <b>العربية</b>."
+        "من <b>الإعدادات ← اللغة</b> اختر <b>العربية</b>.",
+        "لإلغاء التثبيت: من <b>الإعدادات ← اللغة</b> اختر لغة أخرى، وأغلق اللعبة، ثم احذف المجلد <code>mods\\ArabicTranslation</code>."
       ],
       "install_steps_en": [
         "Close the game.",
@@ -33,7 +36,18 @@
         "Open the game folder: in Steam, right-click the game → <b>Manage</b> → <b>Browse local files</b>.",
         "Copy the whole <code>ArabicTranslation</code> folder into the <code>mods</code> folder inside the game folder (create <code>mods</code> if it doesn't exist). Final path: <code>Slay the Spire 2\\mods\\ArabicTranslation\\ArabicTranslation.json</code>",
         "Start the game. The first time, it asks whether to allow mods. Accept.",
-        "Go to <b>Settings → Language</b> and pick <b>العربية</b>."
+        "Go to <b>Settings → Language</b> and pick <b>العربية</b>.",
+        "To uninstall: pick another language in <b>Settings → Language</b>, close the game, then delete the <code>mods\\ArabicTranslation</code> folder."
+      ],
+      "notes": [
+        "عند تشغيل أي مود تنقلك اللعبة إلى <b>ملف حفظ منفصل</b> خاص بالمودات، فيبدو تقدّمك وكأنه صفر. تقدّمك الأصلي في أمان، ويعود عند تشغيل اللعبة بدون المود.",
+        "لم تظهر العربية في قائمة اللغات؟ تأكد أن المسار هو <code>mods\\ArabicTranslation\\ArabicTranslation.json</code>، وأنك وافقت على تفعيل المودات عند تشغيل اللعبة.",
+        "خطأ شائع: مجلد داخل مجلد بنفس الاسم (<code>ArabicTranslation\\ArabicTranslation\\…</code>). إن حدث هذا فانقل المجلد الداخلي مستوى واحدًا للأعلى."
+      ],
+      "notes_en": [
+        "Whenever mods are on, the game switches to a <b>separate save</b> for modded play, so your progress looks like it reset. Your original progress is safe and comes back when you play without the mod.",
+        "Arabic isn't in the language list? Check the path is <code>mods\\ArabicTranslation\\ArabicTranslation.json</code>, and that you allowed mods when the game started.",
+        "Common mistake: a folder inside a folder with the same name (<code>ArabicTranslation\\ArabicTranslation\\…</code>). If that happens, move the inner folder up one level."
       ],
       "changelog": [
         {
@@ -86,6 +100,8 @@
       "file_size": "10.4 MB",
       "release_date": "2026-10-04",
       "download": "https://github.com/{repo}/releases/download/silent-hill-townfall-v1.0.0/TownfallArabic-v1.0.0.zip",
+      "install_summary": "ضع ملفات التعريب الثلاثة (<code>.pak</code> و <code>.utoc</code> و <code>.ucas</code>) في <code>Townfall\\Content\\Paks\\~mods</code>، ثم اختر <b>Italiano</b> من <b>Text Language</b> لتظهر العربية.",
+      "install_summary_en": "Put the three mod files (<code>.pak</code>, <code>.utoc</code>, <code>.ucas</code>) in <code>Townfall\\Content\\Paks\\~mods</code>, then set <b>Text Language</b> to <b>Italiano</b> to get Arabic.",
       "about": [
         "تعريب شامل لكل نصوص <b>SILENT HILL: Townfall</b> تقريبًا: أكثر من 3,900 سطر بين حوارات وترجمة نصية، ووصف للأصوات، ومستندات ورسائل وأشرطة، وأسماء الأغراض ووصفها، والقوائم والإعدادات، والأهداف، ولافتات الشوارع والمباني، والدروس التعليمية، والشارة.",
         "كُتبت الترجمة بالعربية الفصحى المعاصرة، مع الحفاظ على أجواء الرعب النفسي للقصة: لكل شخصية صوتها، والمستندات بأسلوب أدبي، والقوائم قصيرة وواضحة. أسماء الأشخاص والأماكن ثابتة في كل اللعبة.",

@@ -90,15 +90,19 @@ Tips:
   "file_size": "2.1 MB",
   "release_date": "2026-11-15",
   "download": "https://github.com/{repo}/releases/download/hollow-knight-v0.1.0/HollowKnightArabic-v0.1.0.zip",
+  "install_summary": "ضع المجلد في <code>mods</code>، ثم اختر <b>العربية</b> من الإعدادات.",
+  "install_summary_en": "Put the folder in <code>mods</code>, then pick <b>العربية</b> in Settings.",
   "install_steps": [
     "أغلق اللعبة.",
     "فك ضغط الملف.",
-    "انسخ المجلد إلى <code>mods</code>."
+    "انسخ المجلد إلى <code>mods</code>.",
+    "لإلغاء التثبيت: احذف المجلد من <code>mods</code>."
   ],
   "install_steps_en": [
     "Close the game.",
     "Unzip the file.",
-    "Copy the folder into <code>mods</code>."
+    "Copy the folder into <code>mods</code>.",
+    "To uninstall: delete the folder from <code>mods</code>."
   ],
   "changelog": [
     {
@@ -133,11 +137,16 @@ Tips:
 | `file_size` | Size of the zip | `"2.1 MB"` |
 | `release_date` | Date as **year-month-day** | `"2026-11-15"` |
 | `download` | Link to the zip on GitHub Releases (see Step 4) | |
-| `install_steps` | List of steps, in Arabic | |
+| `install_summary` | One sentence for the Install guide page: where the files go and which language to pick. Optional. | see template |
+| `install_steps` | This game's own steps, in Arabic. End with how to uninstall. Shown only on this game's page. | |
+| `notes` | Extra tips for this game only (troubleshooting, saves…). Optional. | |
 | `changelog` | List of versions, **newest first** | |
 | `known_issues` | List of problems (can be empty: `[]`) | |
 
 Notes:
+- **Every game installs differently.** There is no shared install method: the Install guide page lists
+  each game (with its `install_summary`) and links to that game's own `install_steps`. A new game appears
+  there automatically.
 - Every field ending in `_en` is **optional**. If it's missing, English visitors see the Arabic text.
 - In steps and issues you can use `<b>bold</b>` and `<code>file names</code>`.
 - A **"coming soon"** game only needs: `slug`, `name_ar`, `name_en`, `cover`, `description`,

@@ -44,14 +44,14 @@
           <summary>هل الترجمة آمنة؟<span class="plus"></span></summary>
           <div class="answer">
             <p>نعم. الترجمة نصوص عربية وخط فقط، ومعها في بعض الألعاب ملف كود صغير يخبر اللعبة بوجود لغة جديدة. <b>لا يُعدَّل أي ملف من ملفات اللعبة</b>، ولا تحتوي الترجمة على أي ملف من ملفات اللعبة الأصلية.</p>
-            <p>الترجمات لغوية فقط ولا تغيّر طريقة اللعب. وحمّل دائمًا من هذا الموقع (صفحة GitHub الرسمية للمشروع)، لا من مواقع أخرى.</p>
+            <p>الترجمات لغوية فقط ولا تغيّر طريقة اللعب. وحمّل دائمًا من هذا الموقع، لا من مواقع أخرى.</p>
           </div>
         </details>
         <details class="cut">
           <summary>ماذا يحدث لملف الحفظ (تقدّمي في اللعبة)؟<span class="plus"></span></summary>
           <div class="answer">
-            <p>في بعض الألعاب مثل <b>Slay the Spire 2</b>، عند تشغيل أي مود تنقلك اللعبة تلقائيًا إلى <b>ملف حفظ منفصل</b> خاص بالمودات، فيبدو تقدّمك وكأنه صفر.</p>
-            <p><b>لا تقلق: تقدّمك الأصلي في أمان ولم يُمَس.</b> يعود كما كان بمجرد تشغيل اللعبة بدون المود، لأن الملفين منفصلان تمامًا.</p>
+            <p><b>في Slay the Spire 2:</b> عند تشغيل أي مود تنقلك اللعبة تلقائيًا إلى <b>ملف حفظ منفصل</b> خاص بالمودات، فيبدو تقدّمك وكأنه صفر. <b>لا تقلق: تقدّمك الأصلي في أمان ولم يُمَس.</b> يعود كما كان بمجرد تشغيل اللعبة بدون المود، لأن الملفين منفصلان تمامًا.</p>
+            <p><b>في SILENT HILL: Townfall:</b> لا يحدث هذا. التعريب لا يلمس ملفات الحفظ، فتكمل من حيث توقفت.</p>
           </div>
         </details>
         <details class="cut">
@@ -60,19 +60,19 @@
             <p>غالبًا تستمر الترجمة بالعمل. لكن التحديثات الكبيرة قد تضيف نصوصًا جديدة تظهر بالإنجليزية، أو قد تمنع المود من العمل مؤقتًا.</p>
             <ul>
               <li>قارن إصدار لعبتك بـ«إصدار اللعبة المختبَر» في صفحة الترجمة.</li>
-              <li>إن صدر إصدار جديد من الترجمة فحمّله واستبدل المجلد القديم بالجديد.</li>
-              <li>إن توقفت اللعبة عن العمل، احذف مجلد المود مؤقتًا وانتظر التحديث، ثم أخبرني على GitHub.</li>
+              <li>إن صدر إصدار جديد من الترجمة فحمّله، وضع ملفاته مكان الملفات القديمة كما في خطوات التثبيت في صفحة اللعبة.</li>
+              <li>إن توقفت اللعبة عن العمل، أزل الترجمة مؤقتًا (الطريقة في آخر خطوات التثبيت في صفحة اللعبة) وانتظر التحديث، ثم أخبرني على <a href="https://discord.gg/PmbfJDbdqb" target="_blank" rel="noopener">Discord</a>.</li>
             </ul>
           </div>
         </details>
         <details class="cut">
           <summary>كيف أزيل الترجمة؟<span class="plus"></span></summary>
           <div class="answer">
-            <ol>
-              <li>غيّر لغة اللعبة من الإعدادات إلى أي لغة أخرى.</li>
-              <li>أغلق اللعبة.</li>
-              <li>احذف مجلد المود من داخل مجلد <code>mods</code> (مثلًا <code>mods\ArabicTranslation</code>).</li>
-            </ol>
+            <p>طريقة الإزالة تختلف حسب اللعبة، وتجدها في آخر خطوة من «طريقة التثبيت» في صفحة كل لعبة:</p>
+            <ul>
+              <li><b>Slay the Spire 2:</b> من <b>الإعدادات ← اللغة</b> اختر لغة أخرى، وأغلق اللعبة، ثم احذف المجلد <code>mods\ArabicTranslation</code>.</li>
+              <li><b>SILENT HILL: Townfall:</b> احذف الملفات الثلاثة <code>TownfallArabic_P</code> من مجلد <code>Townfall\Content\Paks\~mods</code>، ثم اختر English من <b>Text Language</b>.</li>
+            </ul>
             <p>هذا كل شيء. اللعبة تعود كما كانت تمامًا، لأن الترجمة لا تغيّر أي ملف آخر.</p>
           </div>
         </details>
@@ -82,7 +82,7 @@
         </details>
         <details class="cut">
           <summary>وجدت خطأ في الترجمة، كيف أبلغ عنه؟<span class="plus"></span></summary>
-          <div class="answer"><p>افتح «Issue» جديدًا على GitHub (الرابط في أسفل الصفحة)، واكتب اسم اللعبة والنص الخاطئ واسم الشاشة أو البطاقة، وأرفق صورة إن أمكن. كل ملاحظة تساعد!</p></div>
+          <div class="answer"><p>أخبرني على <a href="https://discord.gg/PmbfJDbdqb" target="_blank" rel="noopener">Discord</a> (الرابط موجود أيضًا في تبويب «مشاكل معروفة» في صفحة كل لعبة). اكتب اسم اللعبة والنص الخاطئ واسم الشاشة أو البطاقة، وأرفق صورة إن أمكن. كل ملاحظة تساعد!</p></div>
         </details>
         <details class="cut">
           <summary>هل هذه ترجمة رسمية؟<span class="plus"></span></summary>
@@ -96,14 +96,14 @@
           <summary>Is it safe?<span class="plus"></span></summary>
           <div class="answer">
             <p>Yes. A translation is just Arabic text and a font, plus (for some games) a tiny code file that tells the game a new language exists. <b>No game files are changed</b>, and the download contains no files from the original game.</p>
-            <p>Translations only change text, never gameplay. Always download from this site (the project's official GitHub page), not from other sites.</p>
+            <p>Translations only change text, never gameplay. Always download from this site, not from other sites.</p>
           </div>
         </details>
         <details class="cut">
           <summary>What happens to my saves?<span class="plus"></span></summary>
           <div class="answer">
-            <p>Some games, like <b>Slay the Spire 2</b>, automatically switch to a <b>separate save</b> whenever mods are on, so your progress looks like it reset.</p>
-            <p><b>Don't worry: your original progress is safe and untouched.</b> It comes back as soon as you play without the mod, because the two saves are completely separate.</p>
+            <p><b>In Slay the Spire 2:</b> the game automatically switches to a <b>separate save</b> whenever mods are on, so your progress looks like it reset. <b>Don't worry: your original progress is safe and untouched.</b> It comes back as soon as you play without the mod, because the two saves are completely separate.</p>
+            <p><b>In SILENT HILL: Townfall:</b> this doesn't happen. The translation doesn't touch your saves, so you carry on where you left off.</p>
           </div>
         </details>
         <details class="cut">
@@ -112,19 +112,19 @@
             <p>Usually the translation keeps working. But big updates can add new text (which shows in English) or stop the mod from loading for a while.</p>
             <ul>
               <li>Compare your game version with the "Tested game version" on the translation's page.</li>
-              <li>If there's a new translation version, download it and replace the old folder.</li>
-              <li>If the game stops working, remove the mod folder for now, wait for an update, and tell me on GitHub.</li>
+              <li>If there's a new translation version, download it and put its files in place of the old ones, as in the install steps on the game's page.</li>
+              <li>If the game stops working, remove the translation for now (see the last install step on the game's page), wait for an update, and tell me on <a href="https://discord.gg/PmbfJDbdqb" target="_blank" rel="noopener">Discord</a>.</li>
             </ul>
           </div>
         </details>
         <details class="cut">
           <summary>How do I uninstall?<span class="plus"></span></summary>
           <div class="answer">
-            <ol>
-              <li>Switch the game's language in Settings to any other language.</li>
-              <li>Close the game.</li>
-              <li>Delete the mod's folder inside <code>mods</code> (for example <code>mods\ArabicTranslation</code>).</li>
-            </ol>
+            <p>It depends on the game. The last step of "Install steps" on each game's page explains it:</p>
+            <ul>
+              <li><b>Slay the Spire 2:</b> pick another language in <b>Settings → Language</b>, close the game, then delete the <code>mods\ArabicTranslation</code> folder.</li>
+              <li><b>SILENT HILL: Townfall:</b> delete the three <code>TownfallArabic_P</code> files from <code>Townfall\Content\Paks\~mods</code>, then set <b>Text Language</b> back to English.</li>
+            </ul>
             <p>That's it. The game is exactly as before, because the translation doesn't change any other file.</p>
           </div>
         </details>
@@ -134,7 +134,7 @@
         </details>
         <details class="cut">
           <summary>I found a translation mistake. How do I report it?<span class="plus"></span></summary>
-          <div class="answer"><p>Open a new "Issue" on GitHub (link at the bottom of the page). Include the game, the wrong text, and the screen or card name, plus a screenshot if you can. Every report helps!</p></div>
+          <div class="answer"><p>Tell me on <a href="https://discord.gg/PmbfJDbdqb" target="_blank" rel="noopener">Discord</a> (the link is also in the "Known issues" tab on each game's page). Include the game, the wrong text and the screen or card name, plus a screenshot if you can. Every report helps!</p></div>
         </details>
         <details class="cut">
           <summary>Is this an official translation?<span class="plus"></span></summary>

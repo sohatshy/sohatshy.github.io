@@ -107,6 +107,7 @@
     alert: ic('<path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/>'),
     book: ic('<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5z"/><path d="M4 19a2 2 0 0 1 2-2h13"/>'),
     ghost: ic('<path d="M5 21V10a7 7 0 0 1 14 0v11l-2.5-2-2.3 2-2.2-2-2.2 2-2.3-2L5 21z"/><path d="M9.5 10h.01M14.5 10h.01"/>'),
+    discord: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.32 4.37A19.8 19.8 0 0 0 15.4 2.85a13.7 13.7 0 0 0-.63 1.29 18.4 18.4 0 0 0-5.53 0 12.7 12.7 0 0 0-.64-1.29 19.7 19.7 0 0 0-4.92 1.52C.57 9.05-.27 13.6.15 18.1a19.9 19.9 0 0 0 6.03 3.05c.49-.66.92-1.36 1.29-2.1a12.9 12.9 0 0 1-2.03-.97c.17-.13.34-.26.5-.39a14.2 14.2 0 0 0 12.12 0l.5.39c-.65.38-1.33.71-2.04.97.37.74.8 1.44 1.29 2.1a19.8 19.8 0 0 0 6.04-3.05c.5-5.22-.84-9.74-3.53-13.73zM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42s.95-2.42 2.16-2.42c1.2 0 2.18 1.09 2.16 2.42 0 1.34-.96 2.42-2.16 2.42zm7.97 0c-1.18 0-2.16-1.08-2.16-2.42s.95-2.42 2.16-2.42c1.21 0 2.18 1.09 2.16 2.42 0 1.34-.95 2.42-2.16 2.42z"/></svg>',
     github: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>'
   };
 
@@ -159,7 +160,6 @@
 
     const footer = S.$("#site-footer");
     if (footer) {
-      const repo = S.repoUrl();
       footer.className = "site-footer";
       footer.innerHTML = `
         <div class="container footer-top">
@@ -172,14 +172,13 @@
           </ul></div>
           <div><h4>${S.t("footer.help")}</h4><ul>
             ${NAV.slice(2, 5).map((n) => `<li><a href="${n.href}">${S.t(n.key)}</a></li>`).join("")}
-            ${repo ? `<li><a class="gh-link" href="${S.esc(repo)}" target="_blank" rel="noopener">${S.icons.github}${S.t("footer.source")}</a></li>` : ""}
           </ul></div>
         </div>
         <div class="container footer-bottom">
           <span class="disclaimer">${S.t("footer.disclaimer")}</span>
           <span>${S.t("footer.art")}</span>
           <span>${S.t("footer.font")} <a href="https://openfontlicense.org" target="_blank" rel="noopener">OFL</a> · <a href="https://github.com/Gue3bara/Cairo" target="_blank" rel="noopener">Cairo</a></span>
-          <span>© ${new Date().getFullYear()} ${S.esc(name)} · ${S.t("footer.made")}${repo ? ` · <a href="${S.esc(repo)}" target="_blank" rel="noopener">GitHub</a>` : ""}</span>
+          <span>© ${new Date().getFullYear()} ${S.esc(name)} · ${S.t("footer.made")}</span>
         </div>`;
     }
 
@@ -279,7 +278,7 @@
       const [site, games] = await Promise.all([getJSON("site.json").catch(() => ({})), getJSON("games.json")]);
       S.site = site;
       S.data = { games: (games.games || []).filter((g) => g && g.slug) };
-      renderChrome(); // now with the GitHub link from site.json
+      renderChrome(); // now with the site name from site.json
       if (render) render(S.data);
     } catch (err) {
       console.error(err);
@@ -289,7 +288,7 @@
     S.observe();
   };
 
-  // Pages without game data (FAQ, About…) still need the GitHub link
+  // Pages without game data (FAQ, About…) still need site.json (site name, Discord and GitHub links)
   S.bootStatic = async (after) => {
     applyI18n(document);
     renderChrome();

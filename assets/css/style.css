@@ -553,31 +553,27 @@ body.menu-open .drawer > a { opacity: 1; transform: none; }
 .shot-placeholder { cursor: default; display: grid; place-items: center; background: repeating-linear-gradient(135deg, var(--surface) 0 14px, var(--surface-2) 14px 28px); }
 .shot-placeholder span { color: var(--faint); font-weight: 700; font-size: .9rem; padding: 6px 12px; background: rgba(3, 6, 15, .55); border-radius: 6px; }
 
-/* Install guide: big step blocks with mock UI */
-.guide-step { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding-block: 44px; border-bottom: 1px solid var(--line); }
-.guide-step:last-child { border-bottom: 0; }
-.guide-num { font-size: 4rem; font-weight: 900; line-height: 1; color: transparent; -webkit-text-stroke: 1.5px var(--gold); direction: ltr; display: inline-block; }
-.guide-step h2 { font-size: 1.7rem; margin: 8px 0 12px; }
-.guide-step p, .guide-step li { color: #cfd6ea; }
-
-.mock { --cut: 18px; background: #1b2233; box-shadow: inset 0 0 0 1px var(--line-strong), 0 30px 60px -20px rgba(0, 0, 0, .7); padding: 18px; font-size: .92rem; direction: ltr; text-align: left; font-family: "Segoe UI", system-ui, sans-serif; }
-.mock-bar { display: flex; gap: 6px; margin-bottom: 14px; }
-.mock-bar i { width: 10px; height: 10px; border-radius: 50%; background: #3a4560; }
-.mock-row { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 6px; color: #c7d0e6; }
-.mock-row.sel { background: #2b3a5c; color: #fff; }
-.mock-menu { margin: 6px 0 0 40px; background: #252e45; border-radius: 6px; padding: 6px; box-shadow: 0 12px 30px rgba(0, 0, 0, .5); width: max-content; }
-.mock-menu .mock-row { padding: 6px 12px; }
-.mock-menu .mock-menu { margin: -34px 0 0 150px; position: relative; }
-.mock-row.hl { background: var(--gold); color: #1a1205; font-weight: 700; }
-.mock-tree { list-style: none; margin: 0; padding: 0; font-family: ui-monospace, Consolas, monospace; font-size: .88rem; }
-.mock-tree li { padding: 4px 0; color: #c7d0e6; white-space: nowrap; }
-.mock-tree li.hl { color: var(--gold-2); font-weight: 700; }
-.mock-tree .d1 { padding-left: 22px; } .mock-tree .d2 { padding-left: 44px; } .mock-tree .d3 { padding-left: 66px; }
-.mock-tree svg { width: 16px; height: 16px; vertical-align: -3px; margin-right: 6px; }
-.mock-settings { display: grid; gap: 8px; }
-.mock-settings .opt { display: flex; justify-content: space-between; padding: 10px 14px; border-radius: 6px; background: #252e45; color: #c7d0e6; }
-.mock-settings .opt.hl { background: rgba(232, 184, 74, .18); box-shadow: inset 0 0 0 1px var(--gold); color: #fff; }
-.mock-settings .opt b { font-family: "Cairo", sans-serif; }
+/* Install guide: one row per game, linking to that game's own steps */
+.install-list { display: grid; gap: 18px; max-width: 980px; }
+.install-item {
+  --cut: 18px;
+  display: grid; grid-template-columns: 120px 1fr; gap: 24px; align-items: center; padding: 16px;
+  background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); color: var(--text);
+  transition: transform .45s var(--ease), box-shadow .35s;
+}
+.install-item:hover { color: var(--text); transform: translateY(-4px); box-shadow: inset 0 0 0 1px rgba(232, 184, 74, .55), 0 20px 40px -20px rgba(0, 0, 0, .6); }
+.install-cover { --cut: 12px; aspect-ratio: 2 / 3; overflow: hidden; background: var(--surface-3); }
+.install-cover img { width: 100%; height: 100%; object-fit: cover; }
+.install-body { min-width: 0; }
+.install-body .en { display: block; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+.install-body h2 { font-size: 1.4rem; margin: 2px 0 8px; }
+.install-body p { color: #cfd6ea; margin: 0 0 12px; }
+.install-body code { overflow-wrap: anywhere; }
+.install-go { display: inline-flex; align-items: center; gap: 8px; color: var(--gold-2); font-weight: 800; }
+.install-go svg { width: 18px; height: 18px; transition: transform .3s var(--ease); }
+.install-item:hover .install-go svg { transform: translateX(4px); }
+[dir="rtl"] .install-item:hover .install-go svg { transform: translateX(-4px) scaleX(-1); }
+#install { scroll-margin-top: var(--header-h); }
 
 /* FAQ accordion */
 .faq { display: grid; gap: 12px; max-width: 860px; }
@@ -640,7 +636,7 @@ body.menu-open .drawer > a { opacity: 1; transform: none; }
   .menu-btn { display: inline-grid; }
   .header-tools { margin-inline-start: auto; }
   .game-layout { grid-template-columns: 220px 1fr; gap: 32px; }
-  .about-grid, .guide-step { grid-template-columns: 1fr; gap: 24px; }
+  .about-grid { grid-template-columns: 1fr; gap: 24px; }
   .footer-top { grid-template-columns: 1fr 1fr; }
   .footer-about { grid-column: 1 / -1; }
 }
@@ -668,7 +664,9 @@ body.menu-open .drawer > a { opacity: 1; transform: none; }
   .lb-prev, .lb-next { top: auto; bottom: 10px; translate: none; }
   .steps li { padding-inline-start: 66px; }
   .footer-top { grid-template-columns: 1fr; gap: 28px; }
-  .mock-menu .mock-menu { margin: 4px 0 0 20px; }
+  .install-item { grid-template-columns: 76px 1fr; gap: 16px; padding: 12px; align-items: start; }
+  .install-body h2 { font-size: 1.15rem; }
+  .install-body p { font-size: .95rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

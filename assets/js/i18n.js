@@ -55,14 +55,14 @@ window.I18N = {
   "game.download":    { ar: "تحميل الترجمة", en: "Download translation" },
   "game.soon":        { ar: "قريبًا", en: "Coming soon" },
   "game.dlNote":      { ar: "مجاني · يُحمَّل من GitHub Releases", en: "Free · Downloads from GitHub Releases" },
-  "game.guide":       { ar: "دليل التثبيت المصوّر", en: "Illustrated install guide" },
+  "game.guide":       { ar: "طريقة التثبيت", en: "How to install" },
   "game.shots":       { ar: "صور من اللعبة", en: "Screenshots" },
   "game.shotsEyebrow":{ ar: "Gallery", en: "Gallery" },
   "game.tab.install": { ar: "طريقة التثبيت", en: "Install steps" },
   "game.tab.changes": { ar: "سجل التغييرات", en: "Changelog" },
   "game.tab.issues":  { ar: "مشاكل معروفة", en: "Known issues" },
   "game.noIssues":    { ar: "لا توجد مشاكل معروفة حاليًا.", en: "No known issues right now." },
-  "game.reportIssue": { ar: "وجدت خطأ في الترجمة؟ أخبرني على GitHub", en: "Found a translation mistake? Tell me on GitHub" },
+  "game.reportIssue": { ar: "وجدت خطأ في الترجمة؟ أخبرني على Discord", en: "Found a translation mistake? Tell me on Discord" },
   "game.others":      { ar: "ترجمات أخرى", en: "Other translations" },
   "game.othersSub":   { ar: "جرّب لعبة أخرى بالعربية", en: "Try another game in Arabic" },
   "game.notFound":    { ar: "لم أجد هذه اللعبة", en: "Game not found" },
@@ -80,6 +80,9 @@ window.I18N = {
   "lb.prev":          { ar: "الصورة السابقة", en: "Previous image" },
   "lb.next":          { ar: "الصورة التالية", en: "Next image" },
 
+  // Install guide
+  "install.see":      { ar: "اعرض خطوات التثبيت", en: "See the install steps" },
+
   // Footer
   "footer.about":     { ar: "ترجمات عربية مجانية للألعاب، أصنعها بنفسي في وقت فراغي.", en: "Free Arabic game translations that I make myself, in my free time." },
   "footer.explore":   { ar: "استكشف", en: "Explore" },
@@ -87,7 +90,6 @@ window.I18N = {
   "footer.disclaimer":{ ar: "ترجمات معجبين غير رسمية. لا علاقة لنا بمطوري الألعاب.", en: "Unofficial fan translations. Not affiliated with the game developers." },
   "footer.art":      { ar: "أسماء الألعاب وصور أغلفتها ملك لأصحابها.", en: "Game names and cover artwork belong to their respective owners." },
   "footer.font":      { ar: "خط القاهرة (Cairo) © مؤلفو مشروع Cairo، مرخّص برخصة SIL Open Font License 1.1.", en: "Cairo font © The Cairo Project Authors, licensed under the SIL Open Font License 1.1." },
-  "footer.source":    { ar: "الكود المصدري على GitHub", en: "Source code on GitHub" },
   "footer.made":      { ar: "صُنع بحب، وبمساعدة Claude.", en: "Made with love, with help from Claude." },
 
   // Misc

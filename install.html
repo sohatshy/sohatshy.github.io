@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>try{if(localStorage.getItem("lang")==="en"){document.documentElement.lang="en";document.documentElement.dir="ltr"}}catch(e){}</script>
   <title>دليل التثبيت · Install guide — سوهاتشي</title>
-  <meta name="description" content="كيف تثبّت ترجمة عربية للعبتك خطوة بخطوة: افتح مجلد اللعبة من Steam، ضع المود في مجلد mods، واختر العربية من الإعدادات.">
+  <meta name="description" content="لكل لعبة طريقة تثبيت خاصة بها. اختر لعبتك لترى خطوات تثبيت ترجمتها العربية خطوة بخطوة.">
   <meta name="theme-color" content="#080d1c">
   <link rel="canonical" href="{{BASE_URL}}install.html">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="سوهاتشي · Sohatshy">
   <meta property="og:title" content="دليل التثبيت · Install guide — سوهاتشي">
-  <meta property="og:description" content="ثلاث خطوات فقط: افتح مجلد اللعبة، ضع المود في مجلد mods، واختر العربية.">
+  <meta property="og:description" content="لكل لعبة طريقة تثبيت خاصة بها. اختر لعبتك لترى خطواتها.">
   <meta property="og:url" content="{{BASE_URL}}install.html">
   <meta property="og:image" content="{{BASE_URL}}assets/img/og-default.jpg">
   <meta property="og:image:width" content="1200">
@@ -28,172 +28,17 @@
 <body data-page="install">
   <header id="site-header" class="site-header"></header>
 
-  <main id="main">
+  <main id="main" data-needs-data>
     <section class="page-hero container">
       <span class="eyebrow rise">Install guide</span>
       <h1 class="rise" data-lang="ar">دليل التثبيت</h1>
       <h1 class="rise" data-lang="en">Install guide</h1>
-      <p class="rise" data-lang="ar">ثلاث خطوات وتصبح لعبتك بالعربية. لا تحتاج أي برنامج إضافي، ولا يُعدَّل أي ملف من ملفات اللعبة.</p>
-      <p class="rise" data-lang="en">Three steps and your game speaks Arabic. No extra programs needed, and no game files are changed.</p>
+      <p class="rise" data-lang="ar">كل لعبة تُثبَّت بطريقة مختلفة. اختر لعبتك لترى خطواتها كاملة، ولا تطبّق خطوات لعبة على لعبة أخرى.</p>
+      <p class="rise" data-lang="en">Every game installs differently. Pick your game to see its full steps, and don't use one game's steps for another.</p>
     </section>
 
-    <div class="container">
-      <div class="callout info cut reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
-        <p data-lang="ar">هذا شرح عام. لكل لعبة خطوات خاصة في صفحتها (تبويب «طريقة التثبيت»)، والأمثلة هنا من <b>Slay the Spire 2</b>.</p>
-        <p data-lang="en">This is a general guide. Each game has its own exact steps on its page (the "Install steps" tab). The examples here use <b>Slay the Spire 2</b>.</p>
-      </div>
-
-      <!-- Step 0 -->
-      <div class="guide-step reveal">
-        <div>
-          <span class="guide-num">00</span>
-          <h2 data-lang="ar">حمّل الترجمة وفك الضغط</h2>
-          <h2 data-lang="en">Download and unzip</h2>
-          <div data-lang="ar">
-            <p>من صفحة اللعبة اضغط زر <b>«تحميل الترجمة»</b>. سيصلك ملف <code>.zip</code>.</p>
-            <p>اضغط عليه كليك يمين ← <b>Extract All…</b> (استخراج الكل). سيظهر مجلد باسم المود، مثل <code>ArabicTranslation</code>.</p>
-          </div>
-          <div data-lang="en">
-            <p>On the game's page, press <b>"Download translation"</b>. You'll get a <code>.zip</code> file.</p>
-            <p>Right-click it → <b>Extract All…</b>. A folder with the mod's name appears, like <code>ArabicTranslation</code>.</p>
-          </div>
-        </div>
-        <div class="mock cut" aria-hidden="true">
-          <div class="mock-bar"><i></i><i></i><i></i></div>
-          <ul class="mock-tree">
-            <li><svg viewBox="0 0 24 24" fill="#8796ff"><path d="M4 4h16v16H4z" opacity=".3"/><path d="M8 4h2v2H8zm2 2h2v2h-2zM8 8h2v2H8zm2 2h2v2h-2z"/></svg>ArabicTranslation-v0.1.0.zip</li>
-            <li class="hl d1"><svg viewBox="0 0 24 24" fill="#e8b84a"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>ArabicTranslation</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Step 1 -->
-      <div class="guide-step reveal">
-        <div>
-          <span class="guide-num">01</span>
-          <h2 data-lang="ar">افتح مجلد اللعبة من Steam</h2>
-          <h2 data-lang="en">Open the game folder from Steam</h2>
-          <div data-lang="ar">
-            <ol>
-              <li>افتح <b>Steam</b> واذهب إلى <b>Library</b> (المكتبة).</li>
-              <li>اضغط كليك يمين على اسم اللعبة.</li>
-              <li>اختر <b>Manage</b> ثم <b>Browse local files</b>.</li>
-            </ol>
-            <p>سيفتح لك Windows مجلد اللعبة مباشرة، وعادةً يكون في:<br><code>C:\Program Files (x86)\Steam\steamapps\common\Slay the Spire 2</code></p>
-          </div>
-          <div data-lang="en">
-            <ol>
-              <li>Open <b>Steam</b> and go to your <b>Library</b>.</li>
-              <li>Right-click the game's name.</li>
-              <li>Choose <b>Manage</b>, then <b>Browse local files</b>.</li>
-            </ol>
-            <p>Windows opens the game folder for you. It's usually here:<br><code>C:\Program Files (x86)\Steam\steamapps\common\Slay the Spire 2</code></p>
-          </div>
-        </div>
-        <div class="mock cut" aria-hidden="true">
-          <div class="mock-bar"><i></i><i></i><i></i></div>
-          <div class="mock-row">Hollow Knight</div>
-          <div class="mock-row sel">Slay the Spire 2</div>
-          <div class="mock-menu">
-            <div class="mock-row">Play</div>
-            <div class="mock-row">Add to Favorites</div>
-            <div class="mock-row hl">Manage ▸</div>
-            <div class="mock-row">Properties…</div>
-            <div class="mock-menu">
-              <div class="mock-row">Add desktop shortcut</div>
-              <div class="mock-row hl">Browse local files</div>
-              <div class="mock-row">Uninstall</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 2 -->
-      <div class="guide-step reveal">
-        <div>
-          <span class="guide-num">02</span>
-          <h2 data-lang="ar">ضع المود في مجلد mods</h2>
-          <h2 data-lang="en">Put the mod in the mods folder</h2>
-          <div data-lang="ar">
-            <p>داخل مجلد اللعبة ابحث عن مجلد اسمه <code>mods</code>. <b>إن لم يكن موجودًا فأنشئه</b>: كليك يمين ← New ← Folder، وسمّه <code>mods</code> بأحرف صغيرة.</p>
-            <p>انسخ مجلد المود <b>كاملًا</b> إلى داخل <code>mods</code>. يجب أن يكون ملف <code>.json</code> داخل مجلد المود مباشرة، كما في الشكل.</p>
-          </div>
-          <div data-lang="en">
-            <p>Inside the game folder, look for a folder named <code>mods</code>. <b>If it doesn't exist, create it</b>: right-click → New → Folder, and name it <code>mods</code> in lowercase.</p>
-            <p>Copy the <b>whole</b> mod folder into <code>mods</code>. The <code>.json</code> file must sit directly inside the mod folder, like in the picture.</p>
-          </div>
-          <div class="callout cut">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/></svg>
-            <p data-lang="ar">خطأ شائع: مجلد داخل مجلد بنفس الاسم (<code>ArabicTranslation\ArabicTranslation\…</code>). إن حدث هذا فانقل المجلد الداخلي مستوى واحدًا للأعلى.</p>
-            <p data-lang="en">Common mistake: a folder inside a folder with the same name (<code>ArabicTranslation\ArabicTranslation\…</code>). If that happens, move the inner folder up one level.</p>
-          </div>
-        </div>
-        <div class="mock cut" aria-hidden="true">
-          <div class="mock-bar"><i></i><i></i><i></i></div>
-          <ul class="mock-tree">
-            <li><svg viewBox="0 0 24 24" fill="#8a94ad"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Slay the Spire 2</li>
-            <li class="d1" style="color:#6b7594">… (game files)</li>
-            <li class="hl d1"><svg viewBox="0 0 24 24" fill="#e8b84a"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>mods</li>
-            <li class="hl d2"><svg viewBox="0 0 24 24" fill="#e8b84a"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>ArabicTranslation</li>
-            <li class="d3"><svg viewBox="0 0 24 24" fill="#8a94ad"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>fonts</li>
-            <li class="d3"><svg viewBox="0 0 24 24" fill="#8a94ad"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>localization</li>
-            <li class="d3"><svg viewBox="0 0 24 24" fill="#c7d0e6"><path d="M6 2h8l4 4v16H6z" opacity=".5"/></svg>ArabicTranslation.dll</li>
-            <li class="hl d3"><svg viewBox="0 0 24 24" fill="#ffd98a"><path d="M6 2h8l4 4v16H6z"/></svg>ArabicTranslation.json</li>
-            
-          </ul>
-        </div>
-      </div>
-
-      <!-- Step 3 -->
-      <div class="guide-step reveal">
-        <div>
-          <span class="guide-num">03</span>
-          <h2 data-lang="ar">اختر العربية من الإعدادات</h2>
-          <h2 data-lang="en">Pick Arabic in Settings</h2>
-          <div data-lang="ar">
-            <ol>
-              <li>شغّل اللعبة. في أول مرة قد تسألك اللعبة: هل تريد تفعيل المودات؟ اختر <b>نعم</b>.</li>
-              <li>افتح <b>Settings</b> (الإعدادات) ← <b>Language</b> (اللغة).</li>
-              <li>اختر <b>العربية</b>. هذا كل شيء، استمتع!</li>
-            </ol>
-          </div>
-          <div data-lang="en">
-            <ol>
-              <li>Start the game. The first time, it may ask whether to enable mods. Choose <b>Yes</b>.</li>
-              <li>Open <b>Settings</b> → <b>Language</b>.</li>
-              <li>Choose <b>العربية</b> (Arabic). That's it, enjoy!</li>
-            </ol>
-          </div>
-        </div>
-        <div class="mock cut" aria-hidden="true">
-          <div class="mock-bar"><i></i><i></i><i></i></div>
-          <div style="color:#8a94ad;font-size:.8rem;letter-spacing:.2em;margin-bottom:10px">SETTINGS › LANGUAGE</div>
-          <div class="mock-settings">
-            <div class="opt"><span>English</span><span>○</span></div>
-            <div class="opt"><span>Français</span><span>○</span></div>
-            <div class="opt hl"><b>العربية</b><span style="color:var(--gold)">●</span></div>
-            <div class="opt"><span>日本語</span><span>○</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="panel cut reveal" style="margin-top:20px">
-        <h2 data-lang="ar" style="font-size:1.4rem">لم تظهر العربية في القائمة؟</h2>
-        <h2 data-lang="en" style="font-size:1.4rem">Arabic isn't in the list?</h2>
-        <ul data-lang="ar">
-          <li>تأكد أن المسار صحيح: <code>mods\اسم_المود\اسم_المود.json</code>.</li>
-          <li>تأكد أنك وافقت على تفعيل المودات عند تشغيل اللعبة.</li>
-          <li>تأكد أن إصدار اللعبة يطابق «إصدار اللعبة المختبَر» في صفحة الترجمة.</li>
-          <li>ما زالت المشكلة موجودة؟ اطّلع على <a href="faq.html">الأسئلة الشائعة</a> أو أخبرني على GitHub.</li>
-        </ul>
-        <ul data-lang="en">
-          <li>Check the path: <code>mods\ModName\ModName.json</code>.</li>
-          <li>Make sure you allowed mods when the game started.</li>
-          <li>Check your game version matches the "Tested game version" on the translation's page.</li>
-          <li>Still stuck? See the <a href="faq.html">FAQ</a> or tell me on GitHub.</li>
-        </ul>
-      </div>
+    <div class="container section" style="padding-top:8px">
+      <div class="install-list" id="install-list"><p style="color:var(--muted)" data-i18n="loading"></p></div>
     </div>
   </main>
 
@@ -201,6 +46,6 @@
 
   <script src="assets/js/i18n.js" defer></script>
   <script src="assets/js/core.js" defer></script>
-  <script>document.addEventListener("DOMContentLoaded", () => S.bootStatic());</script>
+  <script src="assets/js/install.js" defer></script>
 </body>
 </html>
