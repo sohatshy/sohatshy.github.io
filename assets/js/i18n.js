@@ -1,0 +1,87 @@
+/* Interface text in both languages.
+   To change a word on the site, edit it here. Each key has an Arabic (ar) and English (en) version. */
+window.I18N = {
+  // Navigation
+  "nav.home":        { ar: "الرئيسية", en: "Home" },
+  "nav.games":       { ar: "الترجمات", en: "Translations" },
+  "nav.install":     { ar: "دليل التثبيت", en: "Install guide" },
+  "nav.faq":         { ar: "الأسئلة الشائعة", en: "FAQ" },
+  "nav.request":     { ar: "اطلب ترجمة", en: "Request" },
+  "nav.about":       { ar: "من أنا", en: "About" },
+  "nav.menu":        { ar: "القائمة", en: "Menu" },
+  "nav.close":       { ar: "إغلاق", en: "Close" },
+  "nav.skip":        { ar: "تخطَّ إلى المحتوى", en: "Skip to content" },
+  "lang.switch":     { ar: "English", en: "العربية" },
+
+  // Brand
+  "brand.tagline":   { ar: "ترجمات عربية مجانية للألعاب", en: "Free Arabic game translations" },
+
+  // Home
+  "hero.lead":       { ar: "ألعابك المفضلة، بالعربية. ترجمات مجانية يصنعها لاعب للاعبين.", en: "Your favorite games, in Arabic. Free translations, made by a gamer for gamers." },
+  "hero.browse":     { ar: "تصفّح الترجمات", en: "Browse translations" },
+  "hero.howto":      { ar: "طريقة التثبيت", en: "How to install" },
+  "hero.stat.games": { ar: "ترجمة متاحة", en: "translations available" },
+  "hero.stat.free":  { ar: "مجانية بالكامل", en: "completely free" },
+  "hero.stat.soon":  { ar: "قادمة قريبًا", en: "coming soon" },
+  "popular.title":   { ar: "الأكثر شعبية", en: "Most popular" },
+  "popular.sub":     { ar: "الترجمات التي يحملها اللاعبون أكثر", en: "The translations players grab the most" },
+  "all.title":       { ar: "كل الترجمات", en: "All translations" },
+  "all.sub":         { ar: "ابحث عن لعبتك، أو صفِّ حسب الحالة", en: "Find your game, or filter by status" },
+  "all.search":      { ar: "ابحث باسم اللعبة…", en: "Search by game name…" },
+  "all.empty.t":     { ar: "لا توجد نتائج", en: "No results" },
+  "all.empty.p":     { ar: "لم أجد لعبة بهذا الاسم. هل تريد أن تقترحها؟", en: "No game matches that name. Want to suggest it?" },
+  "soon.title":      { ar: "قادم قريبًا", en: "Coming soon" },
+  "soon.sub":        { ar: "ترجمات أعمل عليها الآن", en: "Translations I'm working on" },
+  "soon.empty.t":    { ar: "لا شيء هنا… بعد!", en: "Nothing here… yet!" },
+  "soon.empty.p":    { ar: "الترجمة القادمة لم تُختر بعد. اقترح لعبتك المفضلة وقد تكون التالية.", en: "The next translation hasn't been picked yet. Suggest your favorite game and it might be next." },
+  "soon.empty.cta":  { ar: "اقترح لعبة", en: "Suggest a game" },
+  "rail.prev":       { ar: "السابق", en: "Previous" },
+  "rail.next":       { ar: "التالي", en: "Next" },
+
+  // Status
+  "status.all":         { ar: "الكل", en: "All" },
+  "status.complete":    { ar: "مكتملة", en: "Complete" },
+  "status.in-progress": { ar: "قيد العمل", en: "In progress" },
+  "status.coming-soon": { ar: "قريبًا", en: "Coming soon" },
+  "badge.new":          { ar: "جديد", en: "New" },
+
+  // Game page
+  "game.translated":  { ar: "نسبة الترجمة", en: "Translated" },
+  "game.modVersion":  { ar: "إصدار الترجمة", en: "Mod version" },
+  "game.gameVersion": { ar: "إصدار اللعبة المختبَر", en: "Tested game version" },
+  "game.size":        { ar: "حجم الملف", en: "File size" },
+  "game.released":    { ar: "تاريخ الإصدار", en: "Released" },
+  "game.platform":    { ar: "المنصة", en: "Platform" },
+  "game.download":    { ar: "تحميل الترجمة", en: "Download translation" },
+  "game.soon":        { ar: "قريبًا", en: "Coming soon" },
+  "game.dlNote":      { ar: "مجاني · يُحمَّل من GitHub Releases", en: "Free · Downloads from GitHub Releases" },
+  "game.guide":       { ar: "دليل التثبيت المصوّر", en: "Illustrated install guide" },
+  "game.shots":       { ar: "صور من اللعبة", en: "Screenshots" },
+  "game.shotsEyebrow":{ ar: "Gallery", en: "Gallery" },
+  "game.tab.install": { ar: "طريقة التثبيت", en: "Install steps" },
+  "game.tab.changes": { ar: "سجل التغييرات", en: "Changelog" },
+  "game.tab.issues":  { ar: "مشاكل معروفة", en: "Known issues" },
+  "game.noIssues":    { ar: "لا توجد مشاكل معروفة حاليًا.", en: "No known issues right now." },
+  "game.reportIssue": { ar: "وجدت خطأ في الترجمة؟ أخبرني على GitHub", en: "Found a translation mistake? Tell me on GitHub" },
+  "game.others":      { ar: "ترجمات أخرى", en: "Other translations" },
+  "game.othersSub":   { ar: "جرّب لعبة أخرى بالعربية", en: "Try another game in Arabic" },
+  "game.notFound":    { ar: "لم أجد هذه اللعبة", en: "Game not found" },
+  "game.back":        { ar: "العودة للرئيسية", en: "Back to home" },
+  "game.details":     { ar: "التفاصيل", en: "Details" },
+  "lb.close":         { ar: "إغلاق", en: "Close" },
+  "lb.prev":          { ar: "الصورة السابقة", en: "Previous image" },
+  "lb.next":          { ar: "الصورة التالية", en: "Next image" },
+
+  // Footer
+  "footer.about":     { ar: "ترجمات عربية مجانية للألعاب، أصنعها بنفسي في وقت فراغي.", en: "Free Arabic game translations that I make myself, in my free time." },
+  "footer.explore":   { ar: "استكشف", en: "Explore" },
+  "footer.help":      { ar: "مساعدة", en: "Help" },
+  "footer.disclaimer":{ ar: "ترجمات معجبين غير رسمية. لا علاقة لنا بمطوري الألعاب.", en: "Unofficial fan translations. Not affiliated with the game developers." },
+  "footer.font":      { ar: "خط القاهرة (Cairo) © مؤلفو مشروع Cairo، مرخّص برخصة SIL Open Font License 1.1.", en: "Cairo font © The Cairo Project Authors, licensed under the SIL Open Font License 1.1." },
+  "footer.source":    { ar: "الكود المصدري على GitHub", en: "Source code on GitHub" },
+  "footer.made":      { ar: "صُنع بحب، وبمساعدة Claude.", en: "Made with love, with help from Claude." },
+
+  // Misc
+  "loading":          { ar: "جارٍ التحميل…", en: "Loading…" },
+  "error.load":       { ar: "تعذّر تحميل قائمة الألعاب. حدّث الصفحة وحاول مرة أخرى.", en: "Couldn't load the games list. Refresh the page and try again." }
+};

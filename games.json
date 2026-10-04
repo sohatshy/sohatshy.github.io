@@ -1,0 +1,68 @@
+{
+  "games": [
+    {
+      "slug": "slay-the-spire-2",
+      "name_ar": "سلاي ذا سباير 2",
+      "name_en": "Slay the Spire 2",
+      "cover": "images/slay-the-spire-2/cover.jpg",
+      "screenshots": [
+        "images/slay-the-spire-2/screenshot-1.jpg"
+      ],
+      "description": "ترجمة شبه كاملة للبطاقات والأثريات والقدرات والأحداث والقوائم، مع خط «القاهرة» ودعم الكتابة من اليمين لليسار.",
+      "description_en": "A near-complete translation of cards, relics, powers, events and menus, with the Cairo font and right-to-left text support.",
+      "status": "complete",
+      "percent": 98,
+      "popularity": 1,
+      "platform": "PC (Steam)",
+      "mod_version": "0.1.0",
+      "game_version": "v0.107.1",
+      "file_size": "453 KB",
+      "release_date": "2026-10-02",
+      "download": "https://github.com/{repo}/releases/download/slay-the-spire-2-v0.1.0/ArabicTranslation-v0.1.0.zip",
+      "install_steps": [
+        "أغلق اللعبة.",
+        "فك ضغط الملف. سترى مجلدًا اسمه <code>ArabicTranslation</code>.",
+        "افتح مجلد اللعبة: في Steam اضغط كليك يمين على اللعبة ← <b>Manage</b> ← <b>Browse local files</b>.",
+        "انسخ مجلد <code>ArabicTranslation</code> كاملًا إلى مجلد <code>mods</code> داخل مجلد اللعبة (إن لم يوجد مجلد <code>mods</code> فأنشئه). المسار النهائي: <code>Slay the Spire 2\\mods\\ArabicTranslation\\ArabicTranslation.json</code>",
+        "شغّل اللعبة. عند أول مرة ستسألك اللعبة عن قبول المودات، فاقبل.",
+        "من <b>الإعدادات ← اللغة</b> اختر <b>العربية</b>."
+      ],
+      "install_steps_en": [
+        "Close the game.",
+        "Unzip the file. You'll see a folder called <code>ArabicTranslation</code>.",
+        "Open the game folder: in Steam, right-click the game → <b>Manage</b> → <b>Browse local files</b>.",
+        "Copy the whole <code>ArabicTranslation</code> folder into the <code>mods</code> folder inside the game folder (create <code>mods</code> if it doesn't exist). Final path: <code>Slay the Spire 2\\mods\\ArabicTranslation\\ArabicTranslation.json</code>",
+        "Start the game. The first time, it asks whether to allow mods. Accept.",
+        "Go to <b>Settings → Language</b> and pick <b>العربية</b>."
+      ],
+      "changelog": [
+        {
+          "version": "0.1.0",
+          "date": "2026-10-02",
+          "changes": [
+            "أول إصدار: ترجمة نحو 98% من نصوص اللعبة.",
+            "إضافة خط «القاهرة» ودعم الكتابة من اليمين لليسار.",
+            "إضافة العربية إلى قائمة اللغات في الإعدادات."
+          ],
+          "changes_en": [
+            "First release: about 98% of the game's text translated.",
+            "Added the Cairo font and right-to-left text support.",
+            "Added Arabic to the language list in Settings."
+          ]
+        }
+      ],
+      "known_issues": [
+        "بعض النصوص القليلة (مثل أسماء فريق العمل) ما زالت بالإنجليزية.",
+        "تظهر أيقونة تحذير بجانب العربية في قائمة اللغات. هي شكلية فقط، لأن اللعبة تعدّ اللغة غير مكتملة رسميًا.",
+        "إذا رأيت نصًا بين أقواس معقوفة مثل <code>{Amount}</code> فأبلغني باسم البطاقة أو الشاشة.",
+        "قد تحتاج الترجمة إلى تحديث بعد تحديثات اللعبة الكبيرة."
+      ],
+      "known_issues_en": [
+        "A few texts (like the credits names) are still in English.",
+        "A warning icon appears next to Arabic in the language list. It's cosmetic only: the game treats the language as unofficial.",
+        "If you see text in curly brackets like <code>{Amount}</code>, please report it with the card or screen name.",
+        "The translation may need an update after big game updates."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- This file is a TEMPLATE. tools/build.py fills the {{…}} parts and makes one page per game. -->
+  <base href="{{BASE_HREF}}">
+  <script>try{if(localStorage.getItem("lang")==="en"){document.documentElement.lang="en";document.documentElement.dir="ltr"}}catch(e){}</script>
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta name="theme-color" content="#080d1c">
+  <link rel="canonical" href="{{PAGE_URL}}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="سوهاتشي · Sohatshy">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:url" content="{{PAGE_URL}}">
+  <meta property="og:image" content="{{OG_IMAGE}}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ar_AR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="game" data-slug="{{SLUG}}">
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main" data-needs-data>
+    <div id="game"><div class="container section"><p style="color:var(--muted)" data-i18n="loading"></p></div></div>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="icon-btn lb-close" type="button" data-i18n-aria="lb.close"></button>
+    <button class="icon-btn lb-prev" type="button" data-i18n-aria="lb.prev"></button>
+    <img alt="">
+    <button class="icon-btn lb-next" type="button" data-i18n-aria="lb.next"></button>
+    <span class="lb-count"></span>
+  </div>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/core.js" defer></script>
+  <script src="assets/js/game.js" defer></script>
+</body>
+</html>

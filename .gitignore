@@ -1,0 +1,6 @@
+﻿# Built site (made by tools/build.py, never edit by hand)
+_site/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

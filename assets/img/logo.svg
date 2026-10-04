@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Sohatshy">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe29a"/>
+      <stop offset=".55" stop-color="#e8b84a"/>
+      <stop offset="1" stop-color="#b9842a"/>
+    </linearGradient>
+  </defs>
+  <!-- cut-corner frame (top-right and bottom-left corners clipped, like the site's cards) -->
+  <path d="M2 2 H50 L62 14 V62 H14 L2 50 Z" fill="#0d1428"/>
+  <path d="M4.5 4.5 H49 L59.5 15 V59.5 H15 L4.5 49 Z" fill="none" stroke="url(#g)" stroke-width="2.5"/>
+  <!-- the letter seen (س): three teeth and a deep bowl -->
+  <path d="M50 21 V31 Q50 36 45.5 36 Q41 36 41 31 V25 V31 Q41 36 36.5 36 Q32 36 32 31 V25 V33 Q32 48 21.5 48 Q12 48 12 38"
+        fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- diamond spark -->
+  <path d="M21 17 L25 21 L21 25 L17 21 Z" fill="url(#g)"/>
+</svg>

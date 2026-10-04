@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>try{if(localStorage.getItem("lang")==="en"){document.documentElement.lang="en";document.documentElement.dir="ltr"}}catch(e){}</script>
+  <title>سوهاتشي · Sohatshy — ترجمات عربية مجانية للألعاب</title>
+  <meta name="description" content="ألعابك المفضلة بالعربية. ترجمات عربية مجانية وغير رسمية للألعاب، مع شرح التثبيت خطوة بخطوة. Free Arabic game translation mods.">
+  <meta name="theme-color" content="#080d1c">
+  <link rel="canonical" href="{{BASE_URL}}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="سوهاتشي · Sohatshy">
+  <meta property="og:title" content="سوهاتشي · Sohatshy — ترجمات عربية مجانية للألعاب">
+  <meta property="og:description" content="ألعابك المفضلة، بالعربية. ترجمات مجانية يصنعها لاعب للاعبين.">
+  <meta property="og:url" content="{{BASE_URL}}">
+  <meta property="og:image" content="{{BASE_URL}}assets/img/og-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ar_AR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main" data-needs-data>
+    <!-- Hero: background is filled with screenshots from games.json -->
+    <section class="hero">
+      <div class="hero-bg" id="hero-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow rise">Arabic game translations</span>
+          <h1 class="rise">سوهاتشي<span class="latin">SOHATSHY</span></h1>
+          <p class="hero-lead rise" data-i18n="hero.lead"></p>
+          <div class="hero-actions rise">
+            <a class="btn btn-gold cut" href="#all"><span data-i18n="hero.browse"></span></a>
+            <a class="btn btn-ghost cut" href="install.html"><span data-i18n="hero.howto"></span></a>
+          </div>
+          <div class="hero-stats rise" id="hero-stats"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Most popular -->
+    <section class="section" id="popular-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Top picks</span>
+            <h2 class="section-title" data-i18n="popular.title"></h2>
+            <p class="section-sub" data-i18n="popular.sub"></p>
+          </div>
+          <div class="rail-arrows">
+            <button class="icon-btn" type="button" id="rail-prev" data-i18n-aria="rail.prev"></button>
+            <button class="icon-btn" type="button" id="rail-next" data-i18n-aria="rail.next"></button>
+          </div>
+        </div>
+        <div class="rail-wrap reveal"><div class="rail" id="popular-rail"></div></div>
+      </div>
+    </section>
+
+    <!-- All translations -->
+    <section class="section" id="all">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Library</span>
+            <h2 class="section-title" data-i18n="all.title"></h2>
+            <p class="section-sub" data-i18n="all.sub"></p>
+          </div>
+        </div>
+        <div class="toolbar reveal">
+          <label class="search">
+            <span class="sr-only" data-i18n="all.search"></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input type="search" id="search" data-i18n-placeholder="all.search" autocomplete="off">
+          </label>
+          <div class="chips" id="filters" role="group"></div>
+        </div>
+        <div class="grid" id="grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Coming soon -->
+    <section class="section" id="soon">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">On the way</span>
+            <h2 class="section-title" data-i18n="soon.title"></h2>
+            <p class="section-sub" data-i18n="soon.sub"></p>
+          </div>
+        </div>
+        <div id="soon-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/core.js" defer></script>
+  <script src="assets/js/home.js" defer></script>
+</body>
+</html>
