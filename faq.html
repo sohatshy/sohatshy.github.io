@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>try{if(localStorage.getItem("lang")==="en"){document.documentElement.lang="en";document.documentElement.dir="ltr"}}catch(e){}</script>
+  <title>الأسئلة الشائعة · FAQ — سوهاتشي</title>
+  <meta name="description" content="هل الترجمة آمنة؟ ماذا يحدث لملف الحفظ؟ ماذا أفعل بعد تحديث اللعبة؟ كيف أزيل الترجمة؟ إجابات واضحة هنا.">
+  <meta name="theme-color" content="#080d1c">
+  <link rel="canonical" href="{{BASE_URL}}faq.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="سوهاتشي · Sohatshy">
+  <meta property="og:title" content="الأسئلة الشائعة · FAQ — سوهاتشي">
+  <meta property="og:description" content="الأمان، ملفات الحفظ، تحديثات اللعبة، والإزالة. كل ما تحتاج معرفته.">
+  <meta property="og:url" content="{{BASE_URL}}faq.html">
+  <meta property="og:image" content="{{BASE_URL}}assets/img/og-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="faq">
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main">
+    <section class="page-hero container">
+      <span class="eyebrow rise">FAQ</span>
+      <h1 class="rise" data-lang="ar">الأسئلة الشائعة</h1>
+      <h1 class="rise" data-lang="en">Frequently asked questions</h1>
+      <p class="rise" data-lang="ar">أجوبة قصيرة وصريحة لأكثر الأسئلة التي تصلني.</p>
+      <p class="rise" data-lang="en">Short, honest answers to the questions I get most.</p>
+    </section>
+
+    <div class="container">
+      <!-- Arabic -->
+      <div class="faq reveal" data-lang="ar">
+        <details class="cut" open>
+          <summary>هل الترجمة آمنة؟<span class="plus"></span></summary>
+          <div class="answer">
+            <p>نعم. الترجمة نصوص عربية وخط فقط، ومعها في بعض الألعاب ملف كود صغير يخبر اللعبة بوجود لغة جديدة. <b>لا يُعدَّل أي ملف من ملفات اللعبة</b>، ولا تحتوي الترجمة على أي ملف من ملفات اللعبة الأصلية.</p>
+            <p>الترجمات لغوية فقط ولا تغيّر طريقة اللعب. وحمّل دائمًا من هذا الموقع (صفحة GitHub الرسمية للمشروع)، لا من مواقع أخرى.</p>
+          </div>
+        </details>
+        <details class="cut">
+          <summary>ماذا يحدث لملف الحفظ (تقدّمي في اللعبة)؟<span class="plus"></span></summary>
+          <div class="answer">
+            <p>في بعض الألعاب مثل <b>Slay the Spire 2</b>، عند تشغيل أي مود تنقلك اللعبة تلقائيًا إلى <b>ملف حفظ منفصل</b> خاص بالمودات، فيبدو تقدّمك وكأنه صفر.</p>
+            <p><b>لا تقلق: تقدّمك الأصلي في أمان ولم يُمَس.</b> يعود كما كان بمجرد تشغيل اللعبة بدون المود، لأن الملفين منفصلان تمامًا.</p>
+          </div>
+        </details>
+        <details class="cut">
+          <summary>صدر تحديث جديد للعبة، ماذا أفعل؟<span class="plus"></span></summary>
+          <div class="answer">
+            <p>غالبًا تستمر الترجمة بالعمل. لكن التحديثات الكبيرة قد تضيف نصوصًا جديدة تظهر بالإنجليزية، أو قد تمنع المود من العمل مؤقتًا.</p>
+            <ul>
+              <li>قارن إصدار لعبتك بـ«إصدار اللعبة المختبَر» في صفحة الترجمة.</li>
+              <li>إن صدر إصدار جديد من الترجمة فحمّله واستبدل المجلد القديم بالجديد.</li>
+              <li>إن توقفت اللعبة عن العمل، احذف مجلد المود مؤقتًا وانتظر التحديث، ثم أخبرني على GitHub.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="cut">
+          <summary>كيف أزيل الترجمة؟<span class="plus"></span></summary>
+          <div class="answer">
+            <ol>
+              <li>غيّر لغة اللعبة من الإعدادات إلى أي لغة أخرى.</li>
+              <li>أغلق اللعبة.</li>
+              <li>احذف مجلد المود من داخل مجلد <code>mods</code> (مثلًا <code>mods\ArabicTranslation</code>).</li>
+            </ol>
+            <p>هذا كل شيء. اللعبة تعود كما كانت تمامًا، لأن الترجمة لا تغيّر أي ملف آخر.</p>
+          </div>
+        </details>
+        <details class="cut">
+          <summary>هل الترجمة مجانية؟<span class="plus"></span></summary>
+          <div class="answer"><p>نعم، مجانية بالكامل وستبقى كذلك. إن أعجبتك، فأفضل دعم هو أن تخبر أصدقاءك عنها وتبلغني عن أي خطأ تجده.</p></div>
+        </details>
+        <details class="cut">
+          <summary>وجدت خطأ في الترجمة، كيف أبلغ عنه؟<span class="plus"></span></summary>
+          <div class="answer"><p>افتح «Issue» جديدًا على GitHub (الرابط في أسفل الصفحة)، واكتب اسم اللعبة والنص الخاطئ واسم الشاشة أو البطاقة، وأرفق صورة إن أمكن. كل ملاحظة تساعد!</p></div>
+        </details>
+        <details class="cut">
+          <summary>هل هذه ترجمة رسمية؟<span class="plus"></span></summary>
+          <div class="answer"><p>لا. هي ترجمات معجبين غير رسمية، ولا علاقة لي بمطوري الألعاب أو ناشريها. إن أصدر المطوّر ترجمة عربية رسمية فهي الأفضل دائمًا.</p></div>
+        </details>
+      </div>
+
+      <!-- English -->
+      <div class="faq reveal" data-lang="en">
+        <details class="cut" open>
+          <summary>Is it safe?<span class="plus"></span></summary>
+          <div class="answer">
+            <p>Yes. A translation is just Arabic text and a font, plus (for some games) a tiny code file that tells the game a new language exists. <b>No game files are changed</b>, and the download contains no files from the original game.</p>
+            <p>Translations only change text, never gameplay. Always download from this site (the project's official GitHub page), not from other sites.</p>
+          </div>
+        </details>
+        <details class="cut">
+          <summary>What happens to my saves?<span class="plus"></span></summary>
+          <div class="answer">
+            <p>Some games, like <b>Slay the Spire 2</b>, automatically switch to a <b>separate save</b> whenever mods are on, so your progress looks like it reset.</p>
+            <p><b>Don't worry: your original progress is safe and untouched.</b> It comes back as soon as you play without the mod, because the two saves are completely separate.</p>
+          </div>
+        </details>
+        <details class="cut">
+          <summary>The game just updated. What now?<span class="plus"></span></summary>
+          <div class="answer">
+            <p>Usually the translation keeps working. But big updates can add new text (which shows in English) or stop the mod from loading for a while.</p>
+            <ul>
+              <li>Compare your game version with the "Tested game version" on the translation's page.</li>
+              <li>If there's a new translation version, download it and replace the old folder.</li>
+              <li>If the game stops working, remove the mod folder for now, wait for an update, and tell me on GitHub.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="cut">
+          <summary>How do I uninstall?<span class="plus"></span></summary>
+          <div class="answer">
+            <ol>
+              <li>Switch the game's language in Settings to any other language.</li>
+              <li>Close the game.</li>
+              <li>Delete the mod's folder inside <code>mods</code> (for example <code>mods\ArabicTranslation</code>).</li>
+            </ol>
+            <p>That's it. The game is exactly as before, because the translation doesn't change any other file.</p>
+          </div>
+        </details>
+        <details class="cut">
+          <summary>Is it free?<span class="plus"></span></summary>
+          <div class="answer"><p>Yes, completely free, and it will stay that way. If you like it, the best support is telling your friends and reporting any mistakes you find.</p></div>
+        </details>
+        <details class="cut">
+          <summary>I found a translation mistake. How do I report it?<span class="plus"></span></summary>
+          <div class="answer"><p>Open a new "Issue" on GitHub (link at the bottom of the page). Include the game, the wrong text, and the screen or card name, plus a screenshot if you can. Every report helps!</p></div>
+        </details>
+        <details class="cut">
+          <summary>Is this an official translation?<span class="plus"></span></summary>
+          <div class="answer"><p>No. These are unofficial fan translations, not affiliated with the game developers or publishers. If a developer releases an official Arabic translation, that's always the best choice.</p></div>
+        </details>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/core.js" defer></script>
+  <script>document.addEventListener("DOMContentLoaded", () => S.bootStatic());</script>
+</body>
+</html>

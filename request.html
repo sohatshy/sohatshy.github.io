@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>try{if(localStorage.getItem("lang")==="en"){document.documentElement.lang="en";document.documentElement.dir="ltr"}}catch(e){}</script>
+  <title>اطلب ترجمة · Request a translation — سوهاتشي</title>
+  <meta name="description" content="تريد لعبتك المفضلة بالعربية؟ اقترحها هنا، وقد تكون الترجمة التالية.">
+  <meta name="theme-color" content="#080d1c">
+  <link rel="canonical" href="{{BASE_URL}}request.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="سوهاتشي · Sohatshy">
+  <meta property="og:title" content="اطلب ترجمة · Request a translation — سوهاتشي">
+  <meta property="og:description" content="تريد لعبتك المفضلة بالعربية؟ اقترحها هنا، وقد تكون الترجمة التالية.">
+  <meta property="og:url" content="{{BASE_URL}}request.html">
+  <meta property="og:image" content="{{BASE_URL}}assets/img/og-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="request">
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main">
+    <section class="page-hero container">
+      <span class="eyebrow rise">Request a translation</span>
+      <h1 class="rise" data-lang="ar">اطلب ترجمة</h1>
+      <h1 class="rise" data-lang="en">Request a translation</h1>
+      <p class="rise" data-lang="ar">أي لعبة تتمنى أن تلعبها بالعربية؟ أخبرني، وقد تكون الترجمة التالية.</p>
+      <p class="rise" data-lang="en">Which game do you wish you could play in Arabic? Tell me, and it might be next.</p>
+    </section>
+
+    <div class="container about-grid">
+      <div class="reveal">
+        <h2 class="section-title" style="font-size:1.6rem;margin-bottom:18px" data-lang="ar">كيف تقترح لعبة؟</h2>
+        <h2 class="section-title" style="font-size:1.6rem;margin-bottom:18px" data-lang="en">How to suggest a game</h2>
+        <ol class="steps" data-lang="ar">
+          <li class="cut">اضغط زر <b>«اقترح على GitHub»</b>. ستحتاج حساب GitHub مجانيًا.</li>
+          <li class="cut">اكتب <b>اسم اللعبة</b> في العنوان (العنوان يبدأ بكلمة «طلب ترجمة» تلقائيًا).</li>
+          <li class="cut">أضف <b>رابط اللعبة على Steam</b> ولماذا تحب أن تراها بالعربية.</li>
+          <li class="cut">قبل أن تكتب، ابحث في الطلبات الموجودة. إن وجدت لعبتك فأضف لها 👍 بدل طلب جديد.</li>
+        </ol>
+        <ol class="steps" data-lang="en">
+          <li class="cut">Press <b>"Suggest on GitHub"</b>. You'll need a free GitHub account.</li>
+          <li class="cut">Write the <b>game's name</b> in the title (it starts with "Translation request" for you).</li>
+          <li class="cut">Add the game's <b>Steam link</b> and why you'd like it in Arabic.</li>
+          <li class="cut">Before posting, search existing requests. If your game is already there, give it a 👍 instead.</li>
+        </ol>
+        <div class="download-row" style="margin-top:26px">
+          <a class="btn btn-gold btn-lg cut" id="request-link" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+            <span data-lang="ar">اقترح على GitHub</span><span data-lang="en">Suggest on GitHub</span>
+          </a>
+          <a class="btn btn-ghost cut" id="request-list" href="#" target="_blank" rel="noopener">
+            <span data-lang="ar">شاهد الطلبات الحالية</span><span data-lang="en">See current requests</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="panel cut reveal">
+        <h3 data-lang="ar" style="color:var(--gold-2)">قبل أن تطلب: هل يمكن ترجمة كل لعبة؟</h3>
+        <h3 data-lang="en" style="color:var(--gold-2)">Before you ask: can every game be translated?</h3>
+        <div data-lang="ar">
+          <p>ليس دائمًا، للأسف. الأسهل هي الألعاب التي:</p>
+          <ul>
+            <li>تدعم المودات (مثل وجود مجلد <code>mods</code> أو Steam Workshop).</li>
+            <li>تعمل على الكمبيوتر وتُلعب دون اتصال.</li>
+            <li>لا تملك نظام حماية ضد الغش (Anti-cheat)، لأن تعديلها قد يعرّض حسابك للحظر.</li>
+          </ul>
+          <p style="color:var(--muted)">لا أستطيع الوعد بترجمة كل لعبة، لكنني أقرأ كل طلب.</p>
+        </div>
+        <div data-lang="en">
+          <p>Not always, sadly. The easiest games are ones that:</p>
+          <ul>
+            <li>Support mods (for example a <code>mods</code> folder or Steam Workshop).</li>
+            <li>Run on PC and can be played offline.</li>
+            <li>Have no anti-cheat, since modding those could get your account banned.</li>
+          </ul>
+          <p style="color:var(--muted)">I can't promise every game, but I read every request.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/core.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => S.bootStatic(() => {
+      const repo = S.repoUrl();
+      const ar = S.lang !== "en";
+      const body = ar
+        ? "**اسم اللعبة:**\n\n**رابط Steam:**\n\n**لماذا تريدها بالعربية؟**\n"
+        : "**Game name:**\n\n**Steam link:**\n\n**Why do you want it in Arabic?**\n";
+      const link = document.getElementById("request-link");
+      const list = document.getElementById("request-list");
+      if (repo) {
+        link.href = S.issuesUrl({ title: ar ? "طلب ترجمة: " : "Translation request: ", body, labels: "translation-request" });
+        list.href = repo + "/issues?q=" + encodeURIComponent("is:issue label:translation-request");
+      } else {
+        // Not published yet: no GitHub repository known
+        [link, list].forEach((a) => { a.removeAttribute("href"); a.setAttribute("aria-disabled", "true"); });
+      }
+    }));
+  </script>
+</body>
+</html>

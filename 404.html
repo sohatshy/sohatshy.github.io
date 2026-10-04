@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 404 pages can be shown at any address, so links must start from the site root -->
+  <base href="{{BASE_PATH}}">
+  <script>try{if(localStorage.getItem("lang")==="en"){document.documentElement.lang="en";document.documentElement.dir="ltr"}}catch(e){}</script>
+  <title>الصفحة غير موجودة · 404 — سوهاتشي</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#080d1c">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="404">
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main">
+    <section class="notfound container">
+      <div>
+        <span class="big" data-text="404">404</span>
+        <h1 data-lang="ar">ضعت في الزنزانة!</h1>
+        <h1 data-lang="en">Lost in the dungeon!</h1>
+        <p data-lang="ar">هذه الصفحة غير موجودة، أو ربما هزمها زعيم المستوى. لا بأس، طريق العودة من هنا.</p>
+        <p data-lang="en">This page doesn't exist, or maybe the level boss got it. No worries, the way back is right here.</p>
+        <div class="hero-actions" style="justify-content:center">
+          <a class="btn btn-gold cut" href="index.html"><span data-i18n="game.back"></span></a>
+          <a class="btn btn-ghost cut" href="index.html#all"><span data-i18n="hero.browse"></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/core.js" defer></script>
+  <script>document.addEventListener("DOMContentLoaded", () => S.bootStatic());</script>
+</body>
+</html>
