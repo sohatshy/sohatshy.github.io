@@ -77,6 +77,7 @@ window.I18N = {
   "footer.explore":   { ar: "استكشف", en: "Explore" },
   "footer.help":      { ar: "مساعدة", en: "Help" },
   "footer.disclaimer":{ ar: "ترجمات معجبين غير رسمية. لا علاقة لنا بمطوري الألعاب.", en: "Unofficial fan translations. Not affiliated with the game developers." },
+  "footer.art":      { ar: "أسماء الألعاب وصور أغلفتها ملك لأصحابها.", en: "Game names and cover artwork belong to their respective owners." },
   "footer.font":      { ar: "خط القاهرة (Cairo) © مؤلفو مشروع Cairo، مرخّص برخصة SIL Open Font License 1.1.", en: "Cairo font © The Cairo Project Authors, licensed under the SIL Open Font License 1.1." },
   "footer.source":    { ar: "الكود المصدري على GitHub", en: "Source code on GitHub" },
   "footer.made":      { ar: "صُنع بحب، وبمساعدة Claude.", en: "Made with love, with help from Claude." },

@@ -177,6 +177,7 @@
         </div>
         <div class="container footer-bottom">
           <span class="disclaimer">${S.t("footer.disclaimer")}</span>
+          <span>${S.t("footer.art")}</span>
           <span>${S.t("footer.font")} <a href="https://openfontlicense.org" target="_blank" rel="noopener">OFL</a> · <a href="https://github.com/Gue3bara/Cairo" target="_blank" rel="noopener">Cairo</a></span>
           <span>© ${new Date().getFullYear()} ${S.esc(name)} · ${S.t("footer.made")}${repo ? ` · <a href="${S.esc(repo)}" target="_blank" rel="noopener">GitHub</a>` : ""}</span>
         </div>`;
